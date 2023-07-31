@@ -1,0 +1,321 @@
+{
+ "$schema": "http://www.archivesspace.org/archivesspace.json",
+ "parent": "abstract_archival_object",
+ "properties": {
+  "classifications": {
+   "items": {
+    "properties": {
+     "_resolved": {
+      "readonly": "true",
+      "type": "object"
+     },
+     "ref": {
+      "ifmissing": "error",
+      "type": [
+       {
+        "type": "JSONModel(:classification) uri"
+       },
+       {
+        "type": "JSONModel(:classification_term) uri"
+       }
+      ]
+     }
+    },
+    "subtype": "ref",
+    "type": "object"
+   },
+   "type": "array"
+  },
+  "collection_management": {
+   "type": "JSONModel(:collection_management) object"
+  },
+  "create_time": {
+   "readonly": true,
+   "type": "date-time"
+  },
+  "created_by": {
+   "readonly": true,
+   "type": "string"
+  },
+  "dates": {
+   "items": {
+    "type": "JSONModel(:date) object"
+   },
+   "type": "array"
+  },
+  "digital_object_id": {
+   "ifmissing": "error",
+   "maxLength": 255,
+   "type": "string"
+  },
+  "digital_object_type": {
+   "dynamic_enum": "digital_object_digital_object_type",
+   "type": "string"
+  },
+  "extents": {
+   "items": {
+    "type": "JSONModel(:extent) object"
+   },
+   "type": "array"
+  },
+  "external_documents": {
+   "items": {
+    "type": "JSONModel(:external_document) object"
+   },
+   "type": "array"
+  },
+  "external_ids": {
+   "items": {
+    "type": "JSONModel(:external_id) object"
+   },
+   "type": "array"
+  },
+  "file_versions": {
+   "items": {
+    "type": "JSONModel(:file_version) object"
+   },
+   "type": "array"
+  },
+  "is_slug_auto": {
+   "default": true,
+   "type": "boolean"
+  },
+  "jsonmodel_type": {
+   "ifmissing": "error",
+   "type": "string"
+  },
+  "lang_materials": {
+   "items": {
+    "type": "JSONModel(:lang_material) object"
+   },
+   "type": "array"
+  },
+  "last_modified_by": {
+   "readonly": true,
+   "type": "string"
+  },
+  "level": {
+   "dynamic_enum": "digital_object_level",
+   "type": "string"
+  },
+  "linked_agents": {
+   "items": {
+    "properties": {
+     "_inherited": {
+      "properties": {
+       "direct": {
+        "type": "boolean"
+       },
+       "level": {
+        "type": "string"
+       },
+       "ref": {
+        "type": "string"
+       }
+      },
+      "subtype": "ref",
+      "type": "object"
+     },
+     "_resolved": {
+      "readonly": "true",
+      "type": "object"
+     },
+     "ref": {
+      "ifmissing": "error",
+      "type": [
+       {
+        "type": "JSONModel(:agent_corporate_entity) uri"
+       },
+       {
+        "type": "JSONModel(:agent_family) uri"
+       },
+       {
+        "type": "JSONModel(:agent_person) uri"
+       },
+       {
+        "type": "JSONModel(:agent_software) uri"
+       }
+      ]
+     },
+     "relator": {
+      "dynamic_enum": "linked_agent_archival_record_relators",
+      "type": "string"
+     },
+     "role": {
+      "dynamic_enum": "linked_agent_role",
+      "ifmissing": "error",
+      "type": "string"
+     },
+     "terms": {
+      "items": {
+       "type": "JSONModel(:term) uri_or_object"
+      },
+      "type": "array"
+     },
+     "title": {
+      "type": "string"
+     }
+    },
+    "subtype": "ref",
+    "type": "object"
+   },
+   "type": "array"
+  },
+  "linked_events": {
+   "items": {
+    "properties": {
+     "_resolved": {
+      "readonly": "true",
+      "type": "object"
+     },
+     "ref": {
+      "ifmissing": "error",
+      "type": "JSONModel(:event) uri"
+     }
+    },
+    "subtype": "ref",
+    "type": "object"
+   },
+   "readonly": "true",
+   "type": "array"
+  },
+  "linked_instances": {
+   "items": {
+    "properties": {
+     "_resolved": {
+      "readonly": "true",
+      "type": "object"
+     },
+     "ref": {
+      "ifmissing": "error",
+      "type": [
+       "JSONModel(:resource) uri",
+       "JSONModel(:archival_object) object"
+      ]
+     }
+    },
+    "subtype": "ref",
+    "type": "object"
+   },
+   "readonly": "true",
+   "type": "array"
+  },
+  "lock_version": {
+   "required": false,
+   "type": [
+    "integer",
+    "string"
+   ]
+  },
+  "metadata_rights_declarations": {
+   "items": {
+    "type": "JSONModel(:metadata_rights_declaration) object"
+   },
+   "type": "array"
+  },
+  "notes": {
+   "items": {
+    "type": [
+     {
+      "type": "JSONModel(:note_bibliography) object"
+     },
+     {
+      "type": "JSONModel(:note_digital_object) object"
+     }
+    ]
+   },
+   "type": "array"
+  },
+  "publish": {
+   "type": "boolean"
+  },
+  "repository": {
+   "properties": {
+    "_resolved": {
+     "readonly": "true",
+     "type": "object"
+    },
+    "ref": {
+     "ifmissing": "error",
+     "readonly": "true",
+     "type": "JSONModel(:repository) uri"
+    }
+   },
+   "readonly": "true",
+   "subtype": "ref",
+   "type": "object"
+  },
+  "restrictions": {
+   "default": false,
+   "type": "boolean"
+  },
+  "rights_statements": {
+   "items": {
+    "type": "JSONModel(:rights_statement) object"
+   },
+   "type": "array"
+  },
+  "slug": {
+   "type": "string"
+  },
+  "subjects": {
+   "items": {
+    "properties": {
+     "_resolved": {
+      "readonly": "true",
+      "type": "object"
+     },
+     "ref": {
+      "ifmissing": "error",
+      "type": "JSONModel(:subject) uri"
+     }
+    },
+    "subtype": "ref",
+    "type": "object"
+   },
+   "type": "array"
+  },
+  "suppressed": {
+   "readonly": "true",
+   "type": "boolean"
+  },
+  "system_mtime": {
+   "readonly": true,
+   "type": "date-time"
+  },
+  "title": {
+   "ifmissing": "error",
+   "maxLength": 16384,
+   "minLength": 1,
+   "type": "string"
+  },
+  "tree": {
+   "properties": {
+    "_resolved": {
+     "readonly": "true",
+     "type": "object"
+    },
+    "ref": {
+     "ifmissing": "error",
+     "type": "JSONModel(:digital_object_tree) uri"
+    }
+   },
+   "subtype": "ref",
+   "type": "object"
+  },
+  "uri": {
+   "required": false,
+   "type": "string"
+  },
+  "user_defined": {
+   "type": "JSONModel(:user_defined) object"
+  },
+  "user_mtime": {
+   "readonly": true,
+   "type": "date-time"
+  }
+ },
+ "type": "object",
+ "uri": "/repositories/:repo_id/digital_objects",
+ "version": 1
+}

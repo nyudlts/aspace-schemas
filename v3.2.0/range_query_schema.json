@@ -1,0 +1,64 @@
+{
+ "$schema": "http://www.archivesspace.org/archivesspace.json",
+ "properties": {
+  "create_time": {
+   "readonly": true,
+   "type": "date-time"
+  },
+  "created_by": {
+   "readonly": true,
+   "type": "string"
+  },
+  "field": {
+   "ifmissing": "error",
+   "type": "string"
+  },
+  "from": {
+   "type": "string"
+  },
+  "jsonmodel_type": {
+   "ifmissing": "error",
+   "type": "string"
+  },
+  "last_modified_by": {
+   "readonly": true,
+   "type": "string"
+  },
+  "lock_version": {
+   "required": false,
+   "type": [
+    "integer",
+    "string"
+   ]
+  },
+  "repository": {
+   "properties": {
+    "_resolved": {
+     "readonly": "true",
+     "type": "object"
+    },
+    "ref": {
+     "ifmissing": "error",
+     "readonly": "true",
+     "type": "JSONModel(:repository) uri"
+    }
+   },
+   "readonly": "true",
+   "subtype": "ref",
+   "type": "object"
+  },
+  "system_mtime": {
+   "readonly": true,
+   "type": "date-time"
+  },
+  "to": {
+   "type": "string"
+  },
+  "user_mtime": {
+   "readonly": true,
+   "type": "date-time"
+  }
+ },
+ "type": "object",
+ "version": 1
+}

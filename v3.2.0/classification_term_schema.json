@@ -1,0 +1,195 @@
+{
+ "$schema": "http://www.archivesspace.org/archivesspace.json",
+ "parent": "abstract_classification",
+ "properties": {
+  "classification": {
+   "ifmissing": "error",
+   "properties": {
+    "_resolved": {
+     "readonly": "true",
+     "type": "object"
+    },
+    "ref": {
+     "type": "JSONModel(:classification) uri"
+    }
+   },
+   "subtype": "ref",
+   "type": "object"
+  },
+  "create_time": {
+   "readonly": true,
+   "type": "date-time"
+  },
+  "created_by": {
+   "readonly": true,
+   "type": "string"
+  },
+  "creator": {
+   "properties": {
+    "_resolved": {
+     "readonly": "true",
+     "type": "object"
+    },
+    "ref": {
+     "ifmissing": "error",
+     "type": [
+      {
+       "type": "JSONModel(:agent_corporate_entity) uri"
+      },
+      {
+       "type": "JSONModel(:agent_family) uri"
+      },
+      {
+       "type": "JSONModel(:agent_person) uri"
+      },
+      {
+       "type": "JSONModel(:agent_software) uri"
+      }
+     ]
+    }
+   },
+   "subtype": "ref",
+   "type": "object"
+  },
+  "description": {
+   "maxLength": 65000,
+   "type": "string"
+  },
+  "display_string": {
+   "readonly": true,
+   "type": "string"
+  },
+  "identifier": {
+   "ifmissing": "error",
+   "maxLength": 255,
+   "type": "string"
+  },
+  "is_slug_auto": {
+   "default": true,
+   "type": "boolean"
+  },
+  "jsonmodel_type": {
+   "ifmissing": "error",
+   "type": "string"
+  },
+  "last_modified_by": {
+   "readonly": true,
+   "type": "string"
+  },
+  "linked_records": {
+   "items": {
+    "properties": {
+     "_resolved": {
+      "readonly": "true",
+      "type": "object"
+     },
+     "ref": {
+      "type": [
+       {
+        "type": "JSONModel(:accession) uri"
+       },
+       {
+        "type": "JSONModel(:resource) uri"
+       },
+       {
+        "type": "JSONModel(:digital_object) uri"
+       }
+      ]
+     }
+    },
+    "subtype": "ref",
+    "type": "object"
+   },
+   "type": "array"
+  },
+  "lock_version": {
+   "required": false,
+   "type": [
+    "integer",
+    "string"
+   ]
+  },
+  "parent": {
+   "properties": {
+    "_resolved": {
+     "readonly": "true",
+     "type": "object"
+    },
+    "ref": {
+     "type": "JSONModel(:classification_term) uri"
+    }
+   },
+   "subtype": "ref",
+   "type": "object"
+  },
+  "path_from_root": {
+   "items": {
+    "properties": {
+     "identifier": {
+      "ifmissing": "error",
+      "maxLength": 255,
+      "type": "string"
+     },
+     "title": {
+      "ifmissing": "error",
+      "maxLength": 16384,
+      "minLength": 1,
+      "type": "string"
+     }
+    },
+    "type": "object"
+   },
+   "readonly": true,
+   "type": "array"
+  },
+  "position": {
+   "required": false,
+   "type": "integer"
+  },
+  "publish": {
+   "default": true,
+   "readonly": true,
+   "type": "boolean"
+  },
+  "repository": {
+   "properties": {
+    "_resolved": {
+     "readonly": "true",
+     "type": "object"
+    },
+    "ref": {
+     "ifmissing": "error",
+     "readonly": "true",
+     "type": "JSONModel(:repository) uri"
+    }
+   },
+   "readonly": "true",
+   "subtype": "ref",
+   "type": "object"
+  },
+  "slug": {
+   "type": "string"
+  },
+  "system_mtime": {
+   "readonly": true,
+   "type": "date-time"
+  },
+  "title": {
+   "ifmissing": "error",
+   "maxLength": 16384,
+   "minLength": 1,
+   "type": "string"
+  },
+  "uri": {
+   "required": false,
+   "type": "string"
+  },
+  "user_mtime": {
+   "readonly": true,
+   "type": "date-time"
+  }
+ },
+ "type": "object",
+ "uri": "/repositories/:repo_id/classification_terms",
+ "version": 1
+}

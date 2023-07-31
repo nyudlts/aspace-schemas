@@ -1,0 +1,116 @@
+{
+ "$schema": "http://www.archivesspace.org/archivesspace.json",
+ "properties": {
+  "create_time": {
+   "readonly": true,
+   "type": "date-time"
+  },
+  "created_by": {
+   "readonly": true,
+   "type": "string"
+  },
+  "dates": {
+   "items": {
+    "type": "JSONModel(:structured_date_label) object"
+   },
+   "type": "array"
+  },
+  "jsonmodel_type": {
+   "ifmissing": "error",
+   "type": "string"
+  },
+  "last_modified_by": {
+   "readonly": true,
+   "type": "string"
+  },
+  "lock_version": {
+   "required": false,
+   "type": [
+    "integer",
+    "string"
+   ]
+  },
+  "notes": {
+   "items": {
+    "type": [
+     {
+      "type": "JSONModel(:note_text) object"
+     },
+     {
+      "type": "JSONModel(:note_citation) object"
+     }
+    ]
+   },
+   "type": "array"
+  },
+  "places": {
+   "items": {
+    "properties": {
+     "_resolved": {
+      "readonly": "true",
+      "type": "object"
+     },
+     "ref": {
+      "ifmissing": "error",
+      "type": "JSONModel(:subject) uri"
+     }
+    },
+    "subtype": "ref",
+    "type": "object"
+   },
+   "type": "array"
+  },
+  "publish": {
+   "type": "boolean"
+  },
+  "repository": {
+   "properties": {
+    "_resolved": {
+     "readonly": "true",
+     "type": "object"
+    },
+    "ref": {
+     "ifmissing": "error",
+     "readonly": "true",
+     "type": "JSONModel(:repository) uri"
+    }
+   },
+   "readonly": "true",
+   "subtype": "ref",
+   "type": "object"
+  },
+  "subjects": {
+   "items": {
+    "properties": {
+     "_resolved": {
+      "readonly": "true",
+      "type": "object"
+     },
+     "ref": {
+      "ifmissing": "error",
+      "type": "JSONModel(:subject) uri"
+     }
+    },
+    "subtype": "ref",
+    "type": "object"
+   },
+   "type": "array"
+  },
+  "system_mtime": {
+   "readonly": true,
+   "type": "date-time"
+  },
+  "user_mtime": {
+   "readonly": true,
+   "type": "date-time"
+  }
+ },
+ "type": "object",
+ "validations": [
+  [
+   "error",
+   "check_agent_topic_subject_subrecord"
+  ]
+ ],
+ "version": 1
+}

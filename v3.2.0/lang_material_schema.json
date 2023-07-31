@@ -1,0 +1,78 @@
+{
+ "$schema": "http://www.archivesspace.org/archivesspace.json",
+ "properties": {
+  "_inherited": {
+   "properties": {
+    "direct": {
+     "type": "boolean"
+    },
+    "level": {
+     "type": "string"
+    },
+    "ref": {
+     "type": "string"
+    }
+   },
+   "subtype": "ref",
+   "type": "object"
+  },
+  "create_time": {
+   "readonly": true,
+   "type": "date-time"
+  },
+  "created_by": {
+   "readonly": true,
+   "type": "string"
+  },
+  "jsonmodel_type": {
+   "ifmissing": "error",
+   "type": "string"
+  },
+  "language_and_script": {
+   "type": "JSONModel(:language_and_script) object"
+  },
+  "last_modified_by": {
+   "readonly": true,
+   "type": "string"
+  },
+  "lock_version": {
+   "required": false,
+   "type": [
+    "integer",
+    "string"
+   ]
+  },
+  "notes": {
+   "items": {
+    "type": "JSONModel(:note_langmaterial) object"
+   },
+   "type": "array"
+  },
+  "repository": {
+   "properties": {
+    "_resolved": {
+     "readonly": "true",
+     "type": "object"
+    },
+    "ref": {
+     "ifmissing": "error",
+     "readonly": "true",
+     "type": "JSONModel(:repository) uri"
+    }
+   },
+   "readonly": "true",
+   "subtype": "ref",
+   "type": "object"
+  },
+  "system_mtime": {
+   "readonly": true,
+   "type": "date-time"
+  },
+  "user_mtime": {
+   "readonly": true,
+   "type": "date-time"
+  }
+ },
+ "type": "object",
+ "version": 1
+}

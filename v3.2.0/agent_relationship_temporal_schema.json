@@ -1,0 +1,94 @@
+{
+ "$schema": "http://www.archivesspace.org/archivesspace.json",
+ "parent": "abstract_agent_relationship",
+ "properties": {
+  "_resolved": {
+   "readonly": "true",
+   "type": "object"
+  },
+  "create_time": {
+   "readonly": true,
+   "type": "date-time"
+  },
+  "created_by": {
+   "readonly": true,
+   "type": "string"
+  },
+  "dates": {
+   "type": "JSONModel(:structured_date_label) object"
+  },
+  "description": {
+   "maxLength": 65000,
+   "type": "string"
+  },
+  "jsonmodel_type": {
+   "ifmissing": "error",
+   "type": "string"
+  },
+  "last_modified_by": {
+   "readonly": true,
+   "type": "string"
+  },
+  "lock_version": {
+   "required": false,
+   "type": [
+    "integer",
+    "string"
+   ]
+  },
+  "ref": {
+   "ifmissing": "error",
+   "type": [
+    {
+     "type": "JSONModel(:agent_person) uri"
+    },
+    {
+     "type": "JSONModel(:agent_family) uri"
+    },
+    {
+     "type": "JSONModel(:agent_corporate_entity) uri"
+    }
+   ]
+  },
+  "relationship_uri": {
+   "required": false,
+   "type": "string"
+  },
+  "relator": {
+   "dynamic_enum": "agent_relationship_temporal_relator",
+   "ifmissing": "error",
+   "type": "string"
+  },
+  "repository": {
+   "properties": {
+    "_resolved": {
+     "readonly": "true",
+     "type": "object"
+    },
+    "ref": {
+     "ifmissing": "error",
+     "readonly": "true",
+     "type": "JSONModel(:repository) uri"
+    }
+   },
+   "readonly": "true",
+   "subtype": "ref",
+   "type": "object"
+  },
+  "specific_relator": {
+   "dynamic_enum": "agent_relationship_specific_relator",
+   "type": "string"
+  },
+  "system_mtime": {
+   "readonly": true,
+   "type": "date-time"
+  },
+  "user_mtime": {
+   "readonly": true,
+   "type": "date-time"
+  }
+ },
+ "subtype": "ref",
+ "type": "object",
+ "version": 1
+}

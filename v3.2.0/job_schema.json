@@ -1,0 +1,111 @@
+{
+ "$schema": "http://www.archivesspace.org/archivesspace.json",
+ "properties": {
+  "create_time": {
+   "readonly": true,
+   "type": "date-time"
+  },
+  "created_by": {
+   "readonly": true,
+   "type": "string"
+  },
+  "has_modified_records": {
+   "default": false,
+   "readonly": true,
+   "type": "boolean"
+  },
+  "inactive_record": {
+   "default": false,
+   "readonly": true,
+   "type": "boolean"
+  },
+  "job": {
+   "type": "object"
+  },
+  "job_params": {
+   "type": "string"
+  },
+  "job_type": {
+   "readonly": true,
+   "type": "string"
+  },
+  "jsonmodel_type": {
+   "ifmissing": "error",
+   "type": "string"
+  },
+  "last_modified_by": {
+   "readonly": true,
+   "type": "string"
+  },
+  "lock_version": {
+   "required": false,
+   "type": [
+    "integer",
+    "string"
+   ]
+  },
+  "owner": {
+   "readonly": true,
+   "type": "string"
+  },
+  "queue_position": {
+   "readonly": true,
+   "type": "number"
+  },
+  "repository": {
+   "properties": {
+    "_resolved": {
+     "readonly": "true",
+     "type": "object"
+    },
+    "ref": {
+     "ifmissing": "error",
+     "readonly": "true",
+     "type": "JSONModel(:repository) uri"
+    }
+   },
+   "readonly": "true",
+   "subtype": "ref",
+   "type": "object"
+  },
+  "status": {
+   "default": "queued",
+   "enum": [
+    "running",
+    "completed",
+    "canceled",
+    "queued",
+    "failed"
+   ],
+   "readonly": true,
+   "type": "string"
+  },
+  "system_mtime": {
+   "readonly": true,
+   "type": "date-time"
+  },
+  "time_finished": {
+   "readonly": true,
+   "type": "date-time"
+  },
+  "time_started": {
+   "readonly": true,
+   "type": "date-time"
+  },
+  "time_submitted": {
+   "readonly": true,
+   "type": "date-time"
+  },
+  "uri": {
+   "required": false,
+   "type": "string"
+  },
+  "user_mtime": {
+   "readonly": true,
+   "type": "date-time"
+  }
+ },
+ "type": "object",
+ "uri": "/repositories/:repo_id/jobs",
+ "version": 1
+}

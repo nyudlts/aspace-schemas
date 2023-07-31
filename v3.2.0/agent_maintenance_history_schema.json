@@ -1,0 +1,79 @@
+{
+ "$schema": "http://www.archivesspace.org/archivesspace.json",
+ "properties": {
+  "agent": {
+   "ifmissing": "error",
+   "maxLength": 65000,
+   "type": "string"
+  },
+  "create_time": {
+   "readonly": true,
+   "type": "date-time"
+  },
+  "created_by": {
+   "readonly": true,
+   "type": "string"
+  },
+  "descriptive_note": {
+   "default": "",
+   "maxLength": 65000,
+   "type": "string"
+  },
+  "event_date": {
+   "ifmissing": "error",
+   "type": "date-time"
+  },
+  "jsonmodel_type": {
+   "ifmissing": "error",
+   "type": "string"
+  },
+  "last_modified_by": {
+   "readonly": true,
+   "type": "string"
+  },
+  "lock_version": {
+   "required": false,
+   "type": [
+    "integer",
+    "string"
+   ]
+  },
+  "maintenance_agent_type": {
+   "default": "Human",
+   "dynamic_enum": "maintenance_agent_type",
+   "ifmissing": "error",
+   "type": "string"
+  },
+  "maintenance_event_type": {
+   "dynamic_enum": "maintenance_event_type",
+   "ifmissing": "error",
+   "type": "string"
+  },
+  "repository": {
+   "properties": {
+    "_resolved": {
+     "readonly": "true",
+     "type": "object"
+    },
+    "ref": {
+     "ifmissing": "error",
+     "readonly": "true",
+     "type": "JSONModel(:repository) uri"
+    }
+   },
+   "readonly": "true",
+   "subtype": "ref",
+   "type": "object"
+  },
+  "system_mtime": {
+   "readonly": true,
+   "type": "date-time"
+  },
+  "user_mtime": {
+   "readonly": true,
+   "type": "date-time"
+  }
+ },
+ "type": "object",
+ "version": 1
+}

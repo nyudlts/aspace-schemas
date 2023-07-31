@@ -1,0 +1,175 @@
+{
+ "$schema": "http://www.archivesspace.org/archivesspace.json",
+ "properties": {
+  "boolean_1": {
+   "default": false,
+   "type": "boolean"
+  },
+  "boolean_2": {
+   "default": false,
+   "type": "boolean"
+  },
+  "boolean_3": {
+   "default": false,
+   "type": "boolean"
+  },
+  "create_time": {
+   "readonly": true,
+   "type": "date-time"
+  },
+  "created_by": {
+   "readonly": true,
+   "type": "string"
+  },
+  "date_1": {
+   "required": false,
+   "type": "date"
+  },
+  "date_2": {
+   "required": false,
+   "type": "date"
+  },
+  "date_3": {
+   "required": false,
+   "type": "date"
+  },
+  "enum_1": {
+   "dynamic_enum": "user_defined_enum_1",
+   "type": "string"
+  },
+  "enum_2": {
+   "dynamic_enum": "user_defined_enum_2",
+   "type": "string"
+  },
+  "enum_3": {
+   "dynamic_enum": "user_defined_enum_3",
+   "type": "string"
+  },
+  "enum_4": {
+   "dynamic_enum": "user_defined_enum_4",
+   "type": "string"
+  },
+  "integer_1": {
+   "maxlength": 255,
+   "required": false,
+   "type": "string"
+  },
+  "integer_2": {
+   "maxlength": 255,
+   "required": false,
+   "type": "string"
+  },
+  "integer_3": {
+   "maxlength": 255,
+   "required": false,
+   "type": "string"
+  },
+  "jsonmodel_type": {
+   "ifmissing": "error",
+   "type": "string"
+  },
+  "last_modified_by": {
+   "readonly": true,
+   "type": "string"
+  },
+  "lock_version": {
+   "required": false,
+   "type": [
+    "integer",
+    "string"
+   ]
+  },
+  "real_1": {
+   "maxlength": 13,
+   "required": false,
+   "type": "string"
+  },
+  "real_2": {
+   "maxlength": 13,
+   "required": false,
+   "type": "string"
+  },
+  "real_3": {
+   "maxlength": 13,
+   "required": false,
+   "type": "string"
+  },
+  "repository": {
+   "properties": {
+    "_resolved": {
+     "readonly": "true",
+     "type": "object"
+    },
+    "ref": {
+     "ifmissing": "error",
+     "readonly": "true",
+     "type": "JSONModel(:repository) uri"
+    }
+   },
+   "readonly": "true",
+   "subtype": "ref",
+   "type": "object"
+  },
+  "string_1": {
+   "maxLength": 255,
+   "required": false,
+   "type": "string"
+  },
+  "string_2": {
+   "maxLength": 255,
+   "required": false,
+   "type": "string"
+  },
+  "string_3": {
+   "maxLength": 255,
+   "required": false,
+   "type": "string"
+  },
+  "string_4": {
+   "maxLength": 255,
+   "required": false,
+   "type": "string"
+  },
+  "system_mtime": {
+   "readonly": true,
+   "type": "date-time"
+  },
+  "text_1": {
+   "maxLength": 65000,
+   "required": false,
+   "type": "string"
+  },
+  "text_2": {
+   "maxLength": 65000,
+   "required": false,
+   "type": "string"
+  },
+  "text_3": {
+   "maxLength": 65000,
+   "required": false,
+   "type": "string"
+  },
+  "text_4": {
+   "maxLength": 65000,
+   "required": false,
+   "type": "string"
+  },
+  "text_5": {
+   "maxLength": 65000,
+   "required": false,
+   "type": "string"
+  },
+  "user_mtime": {
+   "readonly": true,
+   "type": "date-time"
+  }
+ },
+ "type": "object",
+ "validations": [
+  [
+   "error",
+   "check_user-defined"
+  ]
+ ],
+ "version": 1
+}

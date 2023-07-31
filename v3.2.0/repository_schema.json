@@ -1,0 +1,136 @@
+{
+ "$schema": "http://www.archivesspace.org/archivesspace.json",
+ "properties": {
+  "agent_representation": {
+   "properties": {
+    "ref": {
+     "ifmissing": "error",
+     "readonly": "true",
+     "type": "JSONModel(:agent_corporate_entity) uri"
+    }
+   },
+   "subtype": "ref",
+   "type": "object"
+  },
+  "ark_shoulder": {
+   "type": "string"
+  },
+  "contact_persons": {
+   "maxLength": 65000,
+   "type": "string"
+  },
+  "country": {
+   "dynamic_enum": "country_iso_3166",
+   "required": false,
+   "type": "string"
+  },
+  "create_time": {
+   "readonly": true,
+   "type": "date-time"
+  },
+  "created_by": {
+   "readonly": true,
+   "type": "string"
+  },
+  "description": {
+   "maxLength": 65000,
+   "type": "string"
+  },
+  "display_string": {
+   "readonly": true,
+   "type": "string"
+  },
+  "image_url": {
+   "maxLength": 255,
+   "pattern": "\\Ahttps?:\\/\\/[\\S]+\\z",
+   "type": "string"
+  },
+  "is_slug_auto": {
+   "default": true,
+   "type": "boolean"
+  },
+  "jsonmodel_type": {
+   "ifmissing": "error",
+   "type": "string"
+  },
+  "last_modified_by": {
+   "readonly": true,
+   "type": "string"
+  },
+  "lock_version": {
+   "required": false,
+   "type": [
+    "integer",
+    "string"
+   ]
+  },
+  "name": {
+   "default": "",
+   "ifmissing": "error",
+   "maxLength": 255,
+   "type": "string"
+  },
+  "oai_is_disabled": {
+   "type": "boolean"
+  },
+  "oai_sets_available": {
+   "type": "string"
+  },
+  "org_code": {
+   "maxLength": 255,
+   "type": "string"
+  },
+  "parent_institution_name": {
+   "maxLength": 255,
+   "type": "string"
+  },
+  "publish": {
+   "type": "boolean"
+  },
+  "repo_code": {
+   "ifmissing": "error",
+   "maxLength": 255,
+   "minLength": 1,
+   "type": "string"
+  },
+  "repository": {
+   "properties": {
+    "_resolved": {
+     "readonly": "true",
+     "type": "object"
+    },
+    "ref": {
+     "ifmissing": "error",
+     "readonly": "true",
+     "type": "JSONModel(:repository) uri"
+    }
+   },
+   "readonly": "true",
+   "subtype": "ref",
+   "type": "object"
+  },
+  "slug": {
+   "type": "string"
+  },
+  "system_mtime": {
+   "readonly": true,
+   "type": "date-time"
+  },
+  "uri": {
+   "required": false,
+   "type": "string"
+  },
+  "url": {
+   "maxLength": 255,
+   "pattern": "\\Ahttps?:\\/\\/[\\S]+\\z",
+   "type": "string"
+  },
+  "user_mtime": {
+   "readonly": true,
+   "type": "date-time"
+  }
+ },
+ "type": "object",
+ "uri": "/repositories",
+ "version": 1
+}

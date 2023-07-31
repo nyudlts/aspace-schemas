@@ -1,0 +1,126 @@
+{
+ "$schema": "http://www.archivesspace.org/archivesspace.json",
+ "properties": {
+  "address_1": {
+   "maxLength": 65000,
+   "type": "string"
+  },
+  "address_2": {
+   "maxLength": 65000,
+   "type": "string"
+  },
+  "address_3": {
+   "maxLength": 65000,
+   "type": "string"
+  },
+  "city": {
+   "maxLength": 65000,
+   "type": "string"
+  },
+  "country": {
+   "maxLength": 65000,
+   "type": "string"
+  },
+  "create_time": {
+   "readonly": true,
+   "type": "date-time"
+  },
+  "created_by": {
+   "readonly": true,
+   "type": "string"
+  },
+  "email": {
+   "maxLength": 65000,
+   "type": "string"
+  },
+  "email_signature": {
+   "maxLength": 65000,
+   "type": "string"
+  },
+  "fax": {
+   "maxLength": 65000,
+   "type": "string"
+  },
+  "is_representative": {
+   "default": false,
+   "type": "boolean"
+  },
+  "jsonmodel_type": {
+   "ifmissing": "error",
+   "type": "string"
+  },
+  "last_modified_by": {
+   "readonly": true,
+   "type": "string"
+  },
+  "lock_version": {
+   "required": false,
+   "type": [
+    "integer",
+    "string"
+   ]
+  },
+  "name": {
+   "ifmissing": "error",
+   "maxLength": 65000,
+   "type": "string"
+  },
+  "notes": {
+   "items": {
+    "type": [
+     {
+      "type": "JSONModel(:note_contact_note) object"
+     },
+     {
+      "type": "JSONModel(:note_chronology) object"
+     }
+    ]
+   },
+   "type": "array"
+  },
+  "post_code": {
+   "maxLength": 65000,
+   "type": "string"
+  },
+  "region": {
+   "maxLength": 65000,
+   "type": "string"
+  },
+  "repository": {
+   "properties": {
+    "_resolved": {
+     "readonly": "true",
+     "type": "object"
+    },
+    "ref": {
+     "ifmissing": "error",
+     "readonly": "true",
+     "type": "JSONModel(:repository) uri"
+    }
+   },
+   "readonly": "true",
+   "subtype": "ref",
+   "type": "object"
+  },
+  "salutation": {
+   "dynamic_enum": "agent_contact_salutation",
+   "type": "string"
+  },
+  "system_mtime": {
+   "readonly": true,
+   "type": "date-time"
+  },
+  "telephones": {
+   "items": {
+    "type": "JSONModel(:telephone) object"
+   },
+   "type": "array"
+  },
+  "user_mtime": {
+   "readonly": true,
+   "type": "date-time"
+  }
+ },
+ "type": "object",
+ "version": 1
+}

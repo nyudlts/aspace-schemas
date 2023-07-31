@@ -1,0 +1,107 @@
+{
+ "$schema": "http://www.archivesspace.org/archivesspace.json",
+ "properties": {
+  "create_time": {
+   "readonly": true,
+   "type": "date-time"
+  },
+  "created_by": {
+   "readonly": true,
+   "type": "string"
+  },
+  "depth": {
+   "ifmissing": "error",
+   "type": "string"
+  },
+  "dimension_units": {
+   "dynamic_enum": "dimension_units",
+   "ifmissing": "error",
+   "type": "string"
+  },
+  "display_string": {
+   "readonly": true,
+   "type": "string"
+  },
+  "extent_dimension": {
+   "enum": [
+    "height",
+    "width",
+    "depth"
+   ],
+   "ifmissing": "error",
+   "type": "string"
+  },
+  "height": {
+   "ifmissing": "error",
+   "type": "string"
+  },
+  "jsonmodel_type": {
+   "ifmissing": "error",
+   "type": "string"
+  },
+  "last_modified_by": {
+   "readonly": true,
+   "type": "string"
+  },
+  "lock_version": {
+   "required": false,
+   "type": [
+    "integer",
+    "string"
+   ]
+  },
+  "name": {
+   "ifmissing": "error",
+   "type": "string"
+  },
+  "repository": {
+   "properties": {
+    "_resolved": {
+     "readonly": "true",
+     "type": "object"
+    },
+    "ref": {
+     "ifmissing": "error",
+     "readonly": "true",
+     "type": "JSONModel(:repository) uri"
+    }
+   },
+   "readonly": "true",
+   "subtype": "ref",
+   "type": "object"
+  },
+  "stacking_limit": {
+   "required": false,
+   "type": "string"
+  },
+  "system_mtime": {
+   "readonly": true,
+   "type": "date-time"
+  },
+  "uri": {
+   "required": false,
+   "type": "string"
+  },
+  "url": {
+   "required": false,
+   "type": "string"
+  },
+  "user_mtime": {
+   "readonly": true,
+   "type": "date-time"
+  },
+  "width": {
+   "ifmissing": "error",
+   "type": "string"
+  }
+ },
+ "type": "object",
+ "uri": "/container_profiles",
+ "validations": [
+  [
+   "error",
+   "check_container_profile"
+  ]
+ ],
+ "version": 1
+}

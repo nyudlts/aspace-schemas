@@ -1,0 +1,195 @@
+{
+ "$schema": "http://www.archivesspace.org/archivesspace.json",
+ "properties": {
+  "create_time": {
+   "readonly": true,
+   "type": "date-time"
+  },
+  "created_by": {
+   "readonly": true,
+   "type": "string"
+  },
+  "date": {
+   "type": "JSONModel(:date) object"
+  },
+  "event_type": {
+   "dynamic_enum": "event_event_type",
+   "ifmissing": "error",
+   "type": "string"
+  },
+  "external_documents": {
+   "items": {
+    "type": "JSONModel(:external_document) object"
+   },
+   "type": "array"
+  },
+  "external_ids": {
+   "items": {
+    "type": "JSONModel(:external_id) object"
+   },
+   "type": "array"
+  },
+  "jsonmodel_type": {
+   "ifmissing": "error",
+   "type": "string"
+  },
+  "last_modified_by": {
+   "readonly": true,
+   "type": "string"
+  },
+  "linked_agents": {
+   "ifmissing": "error",
+   "items": {
+    "properties": {
+     "_resolved": {
+      "readonly": "true",
+      "type": "object"
+     },
+     "ref": {
+      "ifmissing": "error",
+      "type": [
+       {
+        "type": "JSONModel(:agent_corporate_entity) uri"
+       },
+       {
+        "type": "JSONModel(:agent_family) uri"
+       },
+       {
+        "type": "JSONModel(:agent_person) uri"
+       },
+       {
+        "type": "JSONModel(:agent_software) uri"
+       }
+      ]
+     },
+     "role": {
+      "dynamic_enum": "linked_agent_event_roles",
+      "ifmissing": "error",
+      "type": "string"
+     }
+    },
+    "subtype": "ref",
+    "type": "object"
+   },
+   "minItems": 1,
+   "type": "array"
+  },
+  "linked_records": {
+   "ifmissing": "error",
+   "items": {
+    "properties": {
+     "_resolved": {
+      "readonly": "true",
+      "type": "object"
+     },
+     "ref": {
+      "ifmissing": "error",
+      "type": [
+       {
+        "type": "JSONModel(:agent_person) uri"
+       },
+       {
+        "type": "JSONModel(:agent_family) uri"
+       },
+       {
+        "type": "JSONModel(:agent_corporate_entity) uri"
+       },
+       {
+        "type": "JSONModel(:agent_software) uri"
+       },
+       {
+        "type": "JSONModel(:accession) uri"
+       },
+       {
+        "type": "JSONModel(:resource) uri"
+       },
+       {
+        "type": "JSONModel(:digital_object) uri"
+       },
+       {
+        "type": "JSONModel(:archival_object) uri"
+       },
+       {
+        "type": "JSONModel(:digital_object_component) uri"
+       },
+       {
+        "type": "JSONModel(:top_container) uri"
+       }
+      ]
+     },
+     "role": {
+      "dynamic_enum": "linked_event_archival_record_roles",
+      "ifmissing": "error",
+      "type": "string"
+     }
+    },
+    "subtype": "ref",
+    "type": "object"
+   },
+   "minItems": 1,
+   "type": "array"
+  },
+  "lock_version": {
+   "required": false,
+   "type": [
+    "integer",
+    "string"
+   ]
+  },
+  "outcome": {
+   "dynamic_enum": "event_outcome",
+   "type": "string"
+  },
+  "outcome_note": {
+   "maxLength": 16384,
+   "type": "string"
+  },
+  "refid": {
+   "type": "string"
+  },
+  "repository": {
+   "properties": {
+    "_resolved": {
+     "readonly": "true",
+     "type": "object"
+    },
+    "ref": {
+     "ifmissing": "error",
+     "readonly": "true",
+     "type": "JSONModel(:repository) uri"
+    }
+   },
+   "readonly": "true",
+   "subtype": "ref",
+   "type": "object"
+  },
+  "suppressed": {
+   "readonly": "true",
+   "type": "boolean"
+  },
+  "system_mtime": {
+   "readonly": true,
+   "type": "date-time"
+  },
+  "timestamp": {
+   "type": "string"
+  },
+  "uri": {
+   "required": false,
+   "type": "string"
+  },
+  "user_mtime": {
+   "readonly": true,
+   "type": "date-time"
+  }
+ },
+ "type": "object",
+ "uri": "/repositories/:repo_id/events",
+ "validations": [
+  [
+   "error",
+   "check_event"
+  ]
+ ],
+ "version": 1
+}

@@ -1,0 +1,86 @@
+{
+ "$schema": "http://www.archivesspace.org/archivesspace.json",
+ "properties": {
+  "_resolved": {
+   "readonly": "true",
+   "type": "object"
+  },
+  "create_time": {
+   "readonly": true,
+   "type": "date-time"
+  },
+  "created_by": {
+   "readonly": true,
+   "type": "string"
+  },
+  "end_date": {
+   "type": "date"
+  },
+  "jsonmodel_type": {
+   "ifmissing": "error",
+   "type": "string"
+  },
+  "last_modified_by": {
+   "readonly": true,
+   "type": "string"
+  },
+  "lock_version": {
+   "required": false,
+   "type": [
+    "integer",
+    "string"
+   ]
+  },
+  "note": {
+   "type": "string"
+  },
+  "ref": {
+   "ifmissing": "error",
+   "type": "JSONModel(:location) uri"
+  },
+  "repository": {
+   "properties": {
+    "_resolved": {
+     "readonly": "true",
+     "type": "object"
+    },
+    "ref": {
+     "ifmissing": "error",
+     "readonly": "true",
+     "type": "JSONModel(:repository) uri"
+    }
+   },
+   "readonly": "true",
+   "subtype": "ref",
+   "type": "object"
+  },
+  "start_date": {
+   "ifmissing": "error",
+   "minLength": 1,
+   "type": "date"
+  },
+  "status": {
+   "dynamic_enum": "container_location_status",
+   "ifmissing": "error",
+   "minLength": 1,
+   "type": "string"
+  },
+  "system_mtime": {
+   "readonly": true,
+   "type": "date-time"
+  },
+  "user_mtime": {
+   "readonly": true,
+   "type": "date-time"
+  }
+ },
+ "subtype": "ref",
+ "type": "object",
+ "validations": [
+  [
+   "error",
+   "check_container_location"
+  ]
+ ],
+ "version": 1
+}

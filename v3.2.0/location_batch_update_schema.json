@@ -1,0 +1,172 @@
+{
+ "$schema": "http://www.archivesspace.org/archivesspace.json",
+ "parent": "location",
+ "properties": {
+  "area": {
+   "maxLength": 255,
+   "required": false,
+   "type": "string"
+  },
+  "barcode": {
+   "maxLength": 255,
+   "required": false,
+   "type": "string"
+  },
+  "building": {
+   "ifmissing": null,
+   "maxLength": 255,
+   "minLength": 1,
+   "type": "string"
+  },
+  "classification": {
+   "maxLength": 255,
+   "required": false,
+   "type": "string"
+  },
+  "coordinate_1_indicator": {
+   "maxLength": 255,
+   "required": false,
+   "type": "string"
+  },
+  "coordinate_1_label": {
+   "maxLength": 255,
+   "required": false,
+   "type": "string"
+  },
+  "coordinate_2_indicator": {
+   "maxLength": 255,
+   "required": false,
+   "type": "string"
+  },
+  "coordinate_2_label": {
+   "maxLength": 255,
+   "required": false,
+   "type": "string"
+  },
+  "coordinate_3_indicator": {
+   "maxLength": 255,
+   "required": false,
+   "type": "string"
+  },
+  "coordinate_3_label": {
+   "maxLength": 255,
+   "required": false,
+   "type": "string"
+  },
+  "create_time": {
+   "readonly": true,
+   "type": "date-time"
+  },
+  "created_by": {
+   "readonly": true,
+   "type": "string"
+  },
+  "external_ids": {
+   "items": {
+    "type": "JSONModel(:external_id) object"
+   },
+   "type": "array"
+  },
+  "floor": {
+   "maxLength": 255,
+   "required": false,
+   "type": "string"
+  },
+  "functions": {
+   "items": {
+    "type": "JSONModel(:location_function) object"
+   },
+   "type": "array"
+  },
+  "jsonmodel_type": {
+   "ifmissing": "error",
+   "type": "string"
+  },
+  "last_modified_by": {
+   "readonly": true,
+   "type": "string"
+  },
+  "location_profile": {
+   "properties": {
+    "_resolved": {
+     "readonly": "true",
+     "type": "object"
+    },
+    "ref": {
+     "type": "JSONModel(:location_profile) uri"
+    }
+   },
+   "subtype": "ref",
+   "type": "object"
+  },
+  "lock_version": {
+   "required": false,
+   "type": [
+    "integer",
+    "string"
+   ]
+  },
+  "owner_repo": {
+   "properties": {
+    "_resolved": {
+     "readonly": "true",
+     "type": "object"
+    },
+    "ref": {
+     "type": "JSONModel(:repository) uri"
+    }
+   },
+   "subtype": "ref",
+   "type": "object"
+  },
+  "record_uris": {
+   "items": {
+    "type": "JSONModel(:location) uri"
+   },
+   "type": "array"
+  },
+  "repository": {
+   "properties": {
+    "_resolved": {
+     "readonly": "true",
+     "type": "object"
+    },
+    "ref": {
+     "ifmissing": "error",
+     "readonly": "true",
+     "type": "JSONModel(:repository) uri"
+    }
+   },
+   "readonly": "true",
+   "subtype": "ref",
+   "type": "object"
+  },
+  "room": {
+   "maxLength": 255,
+   "required": false,
+   "type": "string"
+  },
+  "system_mtime": {
+   "readonly": true,
+   "type": "date-time"
+  },
+  "temporary": {
+   "dynamic_enum": "location_temporary",
+   "type": "string"
+  },
+  "title": {
+   "readonly": true,
+   "type": "string"
+  },
+  "uri": {
+   "required": false,
+   "type": "string"
+  },
+  "user_mtime": {
+   "readonly": true,
+   "type": "date-time"
+  }
+ },
+ "type": "object",
+ "version": 1
+}

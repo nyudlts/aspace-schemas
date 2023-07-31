@@ -1,0 +1,2433 @@
+{
+ "$schema": "http://www.archivesspace.org/archivesspace.json",
+ "properties": {
+  "accession_browse_column_1": {
+   "enum": [
+    "title",
+    "identifier",
+    "accession_date",
+    "acquisition_type",
+    "resource_type",
+    "restrictions_apply",
+    "publish",
+    "access_restrictions",
+    "use_restrictions",
+    "dates",
+    "extents",
+    "processing_priority",
+    "processors",
+    "create_time",
+    "user_mtime",
+    "audit_info",
+    "no_value"
+   ],
+   "required": false,
+   "type": "string"
+  },
+  "accession_browse_column_2": {
+   "enum": [
+    "title",
+    "identifier",
+    "accession_date",
+    "acquisition_type",
+    "resource_type",
+    "restrictions_apply",
+    "publish",
+    "access_restrictions",
+    "use_restrictions",
+    "dates",
+    "extents",
+    "processing_priority",
+    "processors",
+    "create_time",
+    "user_mtime",
+    "audit_info",
+    "no_value"
+   ],
+   "required": false,
+   "type": "string"
+  },
+  "accession_browse_column_3": {
+   "enum": [
+    "title",
+    "identifier",
+    "accession_date",
+    "acquisition_type",
+    "resource_type",
+    "restrictions_apply",
+    "publish",
+    "access_restrictions",
+    "use_restrictions",
+    "dates",
+    "extents",
+    "processing_priority",
+    "processors",
+    "create_time",
+    "user_mtime",
+    "audit_info",
+    "no_value"
+   ],
+   "required": false,
+   "type": "string"
+  },
+  "accession_browse_column_4": {
+   "enum": [
+    "title",
+    "identifier",
+    "accession_date",
+    "acquisition_type",
+    "resource_type",
+    "restrictions_apply",
+    "publish",
+    "access_restrictions",
+    "use_restrictions",
+    "dates",
+    "extents",
+    "processing_priority",
+    "processors",
+    "create_time",
+    "user_mtime",
+    "audit_info",
+    "no_value"
+   ],
+   "required": false,
+   "type": "string"
+  },
+  "accession_browse_column_5": {
+   "enum": [
+    "title",
+    "identifier",
+    "accession_date",
+    "acquisition_type",
+    "resource_type",
+    "restrictions_apply",
+    "publish",
+    "access_restrictions",
+    "use_restrictions",
+    "dates",
+    "extents",
+    "processing_priority",
+    "processors",
+    "create_time",
+    "user_mtime",
+    "audit_info",
+    "no_value"
+   ],
+   "required": false,
+   "type": "string"
+  },
+  "accession_browse_column_6": {
+   "enum": [
+    "title",
+    "identifier",
+    "accession_date",
+    "acquisition_type",
+    "resource_type",
+    "restrictions_apply",
+    "publish",
+    "access_restrictions",
+    "use_restrictions",
+    "dates",
+    "extents",
+    "processing_priority",
+    "processors",
+    "create_time",
+    "user_mtime",
+    "audit_info",
+    "no_value"
+   ],
+   "required": false,
+   "type": "string"
+  },
+  "accession_browse_column_7": {
+   "enum": [
+    "title",
+    "identifier",
+    "accession_date",
+    "acquisition_type",
+    "resource_type",
+    "restrictions_apply",
+    "publish",
+    "access_restrictions",
+    "use_restrictions",
+    "dates",
+    "extents",
+    "processing_priority",
+    "processors",
+    "create_time",
+    "user_mtime",
+    "audit_info",
+    "no_value"
+   ],
+   "required": false,
+   "type": "string"
+  },
+  "accession_sort_column": {
+   "enum": [
+    "score",
+    "title",
+    "identifier",
+    "accession_date",
+    "acquisition_type",
+    "resource_type",
+    "restrictions_apply",
+    "publish",
+    "access_restrictions",
+    "use_restrictions",
+    "processing_priority",
+    "processors",
+    "create_time",
+    "user_mtime"
+   ],
+   "required": false,
+   "type": "string"
+  },
+  "accession_sort_direction": {
+   "enum": [
+    "asc",
+    "desc"
+   ],
+   "required": false,
+   "type": "string"
+  },
+  "agent_browse_column_1": {
+   "enum": [
+    "title",
+    "primary_type",
+    "publish",
+    "authority_id",
+    "source",
+    "rules",
+    "is_user",
+    "audit_info",
+    "no_value"
+   ],
+   "required": false,
+   "type": "string"
+  },
+  "agent_browse_column_2": {
+   "enum": [
+    "title",
+    "primary_type",
+    "publish",
+    "authority_id",
+    "source",
+    "rules",
+    "is_user",
+    "audit_info",
+    "no_value"
+   ],
+   "required": false,
+   "type": "string"
+  },
+  "agent_browse_column_3": {
+   "enum": [
+    "title",
+    "primary_type",
+    "publish",
+    "authority_id",
+    "source",
+    "rules",
+    "is_user",
+    "audit_info",
+    "no_value"
+   ],
+   "required": false,
+   "type": "string"
+  },
+  "agent_browse_column_4": {
+   "enum": [
+    "title",
+    "primary_type",
+    "publish",
+    "authority_id",
+    "source",
+    "rules",
+    "is_user",
+    "audit_info",
+    "no_value"
+   ],
+   "required": false,
+   "type": "string"
+  },
+  "agent_browse_column_5": {
+   "enum": [
+    "title",
+    "primary_type",
+    "publish",
+    "authority_id",
+    "source",
+    "rules",
+    "is_user",
+    "audit_info",
+    "no_value"
+   ],
+   "required": false,
+   "type": "string"
+  },
+  "agent_browse_column_6": {
+   "enum": [
+    "title",
+    "primary_type",
+    "publish",
+    "authority_id",
+    "source",
+    "rules",
+    "is_user",
+    "audit_info",
+    "no_value"
+   ],
+   "required": false,
+   "type": "string"
+  },
+  "agent_browse_column_7": {
+   "enum": [
+    "title",
+    "primary_type",
+    "publish",
+    "authority_id",
+    "source",
+    "rules",
+    "is_user",
+    "audit_info",
+    "no_value"
+   ],
+   "required": false,
+   "type": "string"
+  },
+  "agent_sort_column": {
+   "enum": [
+    "score",
+    "title",
+    "primary_type",
+    "publish",
+    "authority_id",
+    "source",
+    "rules",
+    "is_user"
+   ],
+   "required": false,
+   "type": "string"
+  },
+  "agent_sort_direction": {
+   "enum": [
+    "asc",
+    "desc"
+   ],
+   "required": false,
+   "type": "string"
+  },
+  "archival_object_browse_column_1": {
+   "enum": [
+    "title",
+    "publish",
+    "context",
+    "identifier",
+    "ref_id",
+    "level",
+    "dates",
+    "extents",
+    "langcode",
+    "audit_info",
+    "no_value"
+   ],
+   "required": false,
+   "type": "string"
+  },
+  "archival_object_browse_column_2": {
+   "enum": [
+    "title",
+    "publish",
+    "context",
+    "identifier",
+    "ref_id",
+    "level",
+    "dates",
+    "extents",
+    "langcode",
+    "audit_info",
+    "no_value"
+   ],
+   "required": false,
+   "type": "string"
+  },
+  "archival_object_browse_column_3": {
+   "enum": [
+    "title",
+    "publish",
+    "context",
+    "identifier",
+    "ref_id",
+    "level",
+    "dates",
+    "extents",
+    "langcode",
+    "audit_info",
+    "no_value"
+   ],
+   "required": false,
+   "type": "string"
+  },
+  "archival_object_browse_column_4": {
+   "enum": [
+    "title",
+    "publish",
+    "context",
+    "identifier",
+    "ref_id",
+    "level",
+    "dates",
+    "extents",
+    "langcode",
+    "audit_info",
+    "no_value"
+   ],
+   "required": false,
+   "type": "string"
+  },
+  "archival_object_browse_column_5": {
+   "enum": [
+    "title",
+    "publish",
+    "context",
+    "identifier",
+    "ref_id",
+    "level",
+    "dates",
+    "extents",
+    "langcode",
+    "audit_info",
+    "no_value"
+   ],
+   "required": false,
+   "type": "string"
+  },
+  "archival_object_browse_column_6": {
+   "enum": [
+    "title",
+    "publish",
+    "context",
+    "identifier",
+    "ref_id",
+    "level",
+    "dates",
+    "extents",
+    "langcode",
+    "audit_info",
+    "no_value"
+   ],
+   "required": false,
+   "type": "string"
+  },
+  "archival_object_browse_column_7": {
+   "enum": [
+    "title",
+    "publish",
+    "context",
+    "identifier",
+    "ref_id",
+    "level",
+    "dates",
+    "extents",
+    "langcode",
+    "audit_info",
+    "no_value"
+   ],
+   "required": false,
+   "type": "string"
+  },
+  "archival_object_sort_column": {
+   "enum": [
+    "score",
+    "title",
+    "publish",
+    "identifier",
+    "ref_id",
+    "level"
+   ],
+   "required": false,
+   "type": "string"
+  },
+  "archival_object_sort_direction": {
+   "enum": [
+    "asc",
+    "desc"
+   ],
+   "required": false,
+   "type": "string"
+  },
+  "assessment_browse_column_1": {
+   "enum": [
+    "assessment_id",
+    "assessment_records",
+    "assessment_record_types",
+    "assessment_surveyors",
+    "assessment_survey_begin",
+    "assessment_review_required",
+    "assessment_sensitive_material",
+    "assessment_inactive",
+    "assessment_survey_year",
+    "assessment_collections",
+    "assessment_completed",
+    "assessment_formats",
+    "assessment_ratings",
+    "assessment_conservation_issues",
+    "audit_info",
+    "no_value"
+   ],
+   "required": false,
+   "type": "string"
+  },
+  "assessment_browse_column_2": {
+   "enum": [
+    "assessment_id",
+    "assessment_records",
+    "assessment_record_types",
+    "assessment_surveyors",
+    "assessment_survey_begin",
+    "assessment_review_required",
+    "assessment_sensitive_material",
+    "assessment_inactive",
+    "assessment_survey_year",
+    "assessment_collections",
+    "assessment_completed",
+    "assessment_formats",
+    "assessment_ratings",
+    "assessment_conservation_issues",
+    "audit_info",
+    "no_value"
+   ],
+   "required": false,
+   "type": "string"
+  },
+  "assessment_browse_column_3": {
+   "enum": [
+    "assessment_id",
+    "assessment_records",
+    "assessment_record_types",
+    "assessment_surveyors",
+    "assessment_survey_begin",
+    "assessment_review_required",
+    "assessment_sensitive_material",
+    "assessment_inactive",
+    "assessment_survey_year",
+    "assessment_collections",
+    "assessment_completed",
+    "assessment_formats",
+    "assessment_ratings",
+    "assessment_conservation_issues",
+    "audit_info",
+    "no_value"
+   ],
+   "required": false,
+   "type": "string"
+  },
+  "assessment_browse_column_4": {
+   "enum": [
+    "assessment_id",
+    "assessment_records",
+    "assessment_record_types",
+    "assessment_surveyors",
+    "assessment_survey_begin",
+    "assessment_review_required",
+    "assessment_sensitive_material",
+    "assessment_inactive",
+    "assessment_survey_year",
+    "assessment_collections",
+    "assessment_completed",
+    "assessment_formats",
+    "assessment_ratings",
+    "assessment_conservation_issues",
+    "audit_info",
+    "no_value"
+   ],
+   "required": false,
+   "type": "string"
+  },
+  "assessment_browse_column_5": {
+   "enum": [
+    "assessment_id",
+    "assessment_records",
+    "assessment_record_types",
+    "assessment_surveyors",
+    "assessment_survey_begin",
+    "assessment_review_required",
+    "assessment_sensitive_material",
+    "assessment_inactive",
+    "assessment_survey_year",
+    "assessment_collections",
+    "assessment_completed",
+    "assessment_formats",
+    "assessment_ratings",
+    "assessment_conservation_issues",
+    "audit_info",
+    "no_value"
+   ],
+   "required": false,
+   "type": "string"
+  },
+  "assessment_browse_column_6": {
+   "enum": [
+    "assessment_id",
+    "assessment_records",
+    "assessment_record_types",
+    "assessment_surveyors",
+    "assessment_survey_begin",
+    "assessment_review_required",
+    "assessment_sensitive_material",
+    "assessment_inactive",
+    "assessment_survey_year",
+    "assessment_collections",
+    "assessment_completed",
+    "assessment_formats",
+    "assessment_ratings",
+    "assessment_conservation_issues",
+    "audit_info",
+    "no_value"
+   ],
+   "required": false,
+   "type": "string"
+  },
+  "assessment_browse_column_7": {
+   "enum": [
+    "assessment_id",
+    "assessment_records",
+    "assessment_record_types",
+    "assessment_surveyors",
+    "assessment_survey_begin",
+    "assessment_review_required",
+    "assessment_sensitive_material",
+    "assessment_inactive",
+    "assessment_survey_year",
+    "assessment_collections",
+    "assessment_completed",
+    "assessment_formats",
+    "assessment_ratings",
+    "assessment_conservation_issues",
+    "audit_info",
+    "no_value"
+   ],
+   "required": false,
+   "type": "string"
+  },
+  "assessment_sort_column": {
+   "enum": [
+    "score",
+    "assessment_id",
+    "assessment_survey_begin",
+    "assessment_review_required",
+    "assessment_sensitive_material",
+    "assessment_inactive",
+    "assessment_completed"
+   ],
+   "required": false,
+   "type": "string"
+  },
+  "assessment_sort_direction": {
+   "enum": [
+    "asc",
+    "desc"
+   ],
+   "required": false,
+   "type": "string"
+  },
+  "classification_browse_column_1": {
+   "enum": [
+    "title",
+    "has_classification_terms",
+    "identifier",
+    "audit_info",
+    "no_value"
+   ],
+   "required": false,
+   "type": "string"
+  },
+  "classification_browse_column_2": {
+   "enum": [
+    "title",
+    "has_classification_terms",
+    "identifier",
+    "audit_info",
+    "no_value"
+   ],
+   "required": false,
+   "type": "string"
+  },
+  "classification_browse_column_3": {
+   "enum": [
+    "title",
+    "has_classification_terms",
+    "identifier",
+    "audit_info",
+    "no_value"
+   ],
+   "required": false,
+   "type": "string"
+  },
+  "classification_browse_column_4": {
+   "enum": [
+    "title",
+    "has_classification_terms",
+    "identifier",
+    "audit_info",
+    "no_value"
+   ],
+   "required": false,
+   "type": "string"
+  },
+  "classification_browse_column_5": {
+   "enum": [
+    "title",
+    "has_classification_terms",
+    "identifier",
+    "audit_info",
+    "no_value"
+   ],
+   "required": false,
+   "type": "string"
+  },
+  "classification_browse_column_6": {
+   "enum": [
+    "title",
+    "has_classification_terms",
+    "identifier",
+    "audit_info",
+    "no_value"
+   ],
+   "required": false,
+   "type": "string"
+  },
+  "classification_browse_column_7": {
+   "enum": [
+    "title",
+    "has_classification_terms",
+    "identifier",
+    "audit_info",
+    "no_value"
+   ],
+   "required": false,
+   "type": "string"
+  },
+  "classification_sort_column": {
+   "enum": [
+    "score",
+    "title",
+    "has_classification_terms",
+    "identifier"
+   ],
+   "required": false,
+   "type": "string"
+  },
+  "classification_sort_direction": {
+   "enum": [
+    "asc",
+    "desc"
+   ],
+   "required": false,
+   "type": "string"
+  },
+  "collection_management_browse_column_1": {
+   "enum": [
+    "parent_title",
+    "parent_type",
+    "processing_priority",
+    "processing_status",
+    "processing_hours_total",
+    "processing_funding_source",
+    "processors",
+    "audit_info",
+    "no_value"
+   ],
+   "required": false,
+   "type": "string"
+  },
+  "collection_management_browse_column_2": {
+   "enum": [
+    "parent_title",
+    "parent_type",
+    "processing_priority",
+    "processing_status",
+    "processing_hours_total",
+    "processing_funding_source",
+    "processors",
+    "audit_info",
+    "no_value"
+   ],
+   "required": false,
+   "type": "string"
+  },
+  "collection_management_browse_column_3": {
+   "enum": [
+    "parent_title",
+    "parent_type",
+    "processing_priority",
+    "processing_status",
+    "processing_hours_total",
+    "processing_funding_source",
+    "processors",
+    "audit_info",
+    "no_value"
+   ],
+   "required": false,
+   "type": "string"
+  },
+  "collection_management_browse_column_4": {
+   "enum": [
+    "parent_title",
+    "parent_type",
+    "processing_priority",
+    "processing_status",
+    "processing_hours_total",
+    "processing_funding_source",
+    "processors",
+    "audit_info",
+    "no_value"
+   ],
+   "required": false,
+   "type": "string"
+  },
+  "collection_management_browse_column_5": {
+   "enum": [
+    "parent_title",
+    "parent_type",
+    "processing_priority",
+    "processing_status",
+    "processing_hours_total",
+    "processing_funding_source",
+    "processors",
+    "audit_info",
+    "no_value"
+   ],
+   "required": false,
+   "type": "string"
+  },
+  "collection_management_browse_column_6": {
+   "enum": [
+    "parent_title",
+    "parent_type",
+    "processing_priority",
+    "processing_status",
+    "processing_hours_total",
+    "processing_funding_source",
+    "processors",
+    "audit_info",
+    "no_value"
+   ],
+   "required": false,
+   "type": "string"
+  },
+  "collection_management_browse_column_7": {
+   "enum": [
+    "parent_title",
+    "parent_type",
+    "processing_priority",
+    "processing_status",
+    "processing_hours_total",
+    "processing_funding_source",
+    "processors",
+    "audit_info",
+    "no_value"
+   ],
+   "required": false,
+   "type": "string"
+  },
+  "collection_management_sort_column": {
+   "enum": [
+    "score",
+    "parent_title",
+    "parent_type",
+    "processing_priority",
+    "processing_status",
+    "processing_hours_total",
+    "processing_funding_source",
+    "processors"
+   ],
+   "required": false,
+   "type": "string"
+  },
+  "collection_management_sort_direction": {
+   "enum": [
+    "asc",
+    "desc"
+   ],
+   "required": false,
+   "type": "string"
+  },
+  "container_profile_browse_column_1": {
+   "enum": [
+    "title",
+    "container_profile_width_u_sstr",
+    "container_profile_height_u_sstr",
+    "container_profile_depth_u_sstr",
+    "container_profile_dimension_units_u_sstr",
+    "audit_info",
+    "no_value"
+   ],
+   "required": false,
+   "type": "string"
+  },
+  "container_profile_browse_column_2": {
+   "enum": [
+    "title",
+    "container_profile_width_u_sstr",
+    "container_profile_height_u_sstr",
+    "container_profile_depth_u_sstr",
+    "container_profile_dimension_units_u_sstr",
+    "audit_info",
+    "no_value"
+   ],
+   "required": false,
+   "type": "string"
+  },
+  "container_profile_browse_column_3": {
+   "enum": [
+    "title",
+    "container_profile_width_u_sstr",
+    "container_profile_height_u_sstr",
+    "container_profile_depth_u_sstr",
+    "container_profile_dimension_units_u_sstr",
+    "audit_info",
+    "no_value"
+   ],
+   "required": false,
+   "type": "string"
+  },
+  "container_profile_browse_column_4": {
+   "enum": [
+    "title",
+    "container_profile_width_u_sstr",
+    "container_profile_height_u_sstr",
+    "container_profile_depth_u_sstr",
+    "container_profile_dimension_units_u_sstr",
+    "audit_info",
+    "no_value"
+   ],
+   "required": false,
+   "type": "string"
+  },
+  "container_profile_browse_column_5": {
+   "enum": [
+    "title",
+    "container_profile_width_u_sstr",
+    "container_profile_height_u_sstr",
+    "container_profile_depth_u_sstr",
+    "container_profile_dimension_units_u_sstr",
+    "audit_info",
+    "no_value"
+   ],
+   "required": false,
+   "type": "string"
+  },
+  "container_profile_browse_column_6": {
+   "enum": [
+    "title",
+    "container_profile_width_u_sstr",
+    "container_profile_height_u_sstr",
+    "container_profile_depth_u_sstr",
+    "container_profile_dimension_units_u_sstr",
+    "audit_info",
+    "no_value"
+   ],
+   "required": false,
+   "type": "string"
+  },
+  "container_profile_browse_column_7": {
+   "enum": [
+    "title",
+    "container_profile_width_u_sstr",
+    "container_profile_height_u_sstr",
+    "container_profile_depth_u_sstr",
+    "container_profile_dimension_units_u_sstr",
+    "audit_info",
+    "no_value"
+   ],
+   "required": false,
+   "type": "string"
+  },
+  "container_profile_sort_column": {
+   "enum": [
+    "score",
+    "title"
+   ],
+   "required": false,
+   "type": "string"
+  },
+  "container_profile_sort_direction": {
+   "enum": [
+    "asc",
+    "desc"
+   ],
+   "required": false,
+   "type": "string"
+  },
+  "create_time": {
+   "readonly": true,
+   "type": "date-time"
+  },
+  "created_by": {
+   "readonly": true,
+   "type": "string"
+  },
+  "default_values": {
+   "default": false,
+   "required": false,
+   "type": "boolean"
+  },
+  "digital_object_browse_column_1": {
+   "enum": [
+    "title",
+    "digital_object_id",
+    "publish",
+    "level",
+    "digital_object_type",
+    "restrictions",
+    "dates",
+    "extents",
+    "langcode",
+    "create_time",
+    "user_mtime",
+    "audit_info",
+    "no_value"
+   ],
+   "required": false,
+   "type": "string"
+  },
+  "digital_object_browse_column_2": {
+   "enum": [
+    "title",
+    "digital_object_id",
+    "publish",
+    "level",
+    "digital_object_type",
+    "restrictions",
+    "dates",
+    "extents",
+    "langcode",
+    "create_time",
+    "user_mtime",
+    "audit_info",
+    "no_value"
+   ],
+   "required": false,
+   "type": "string"
+  },
+  "digital_object_browse_column_3": {
+   "enum": [
+    "title",
+    "digital_object_id",
+    "publish",
+    "level",
+    "digital_object_type",
+    "restrictions",
+    "dates",
+    "extents",
+    "langcode",
+    "create_time",
+    "user_mtime",
+    "audit_info",
+    "no_value"
+   ],
+   "required": false,
+   "type": "string"
+  },
+  "digital_object_browse_column_4": {
+   "enum": [
+    "title",
+    "digital_object_id",
+    "publish",
+    "level",
+    "digital_object_type",
+    "restrictions",
+    "dates",
+    "extents",
+    "langcode",
+    "create_time",
+    "user_mtime",
+    "audit_info",
+    "no_value"
+   ],
+   "required": false,
+   "type": "string"
+  },
+  "digital_object_browse_column_5": {
+   "enum": [
+    "title",
+    "digital_object_id",
+    "publish",
+    "level",
+    "digital_object_type",
+    "restrictions",
+    "dates",
+    "extents",
+    "langcode",
+    "create_time",
+    "user_mtime",
+    "audit_info",
+    "no_value"
+   ],
+   "required": false,
+   "type": "string"
+  },
+  "digital_object_browse_column_6": {
+   "enum": [
+    "title",
+    "digital_object_id",
+    "publish",
+    "level",
+    "digital_object_type",
+    "restrictions",
+    "dates",
+    "extents",
+    "langcode",
+    "create_time",
+    "user_mtime",
+    "audit_info",
+    "no_value"
+   ],
+   "required": false,
+   "type": "string"
+  },
+  "digital_object_browse_column_7": {
+   "enum": [
+    "title",
+    "digital_object_id",
+    "publish",
+    "level",
+    "digital_object_type",
+    "restrictions",
+    "dates",
+    "extents",
+    "langcode",
+    "create_time",
+    "user_mtime",
+    "audit_info",
+    "no_value"
+   ],
+   "required": false,
+   "type": "string"
+  },
+  "digital_object_component_browse_column_1": {
+   "enum": [
+    "title",
+    "publish",
+    "context",
+    "dates",
+    "extents",
+    "langcode",
+    "audit_info",
+    "no_value"
+   ],
+   "required": false,
+   "type": "string"
+  },
+  "digital_object_component_browse_column_2": {
+   "enum": [
+    "title",
+    "publish",
+    "context",
+    "dates",
+    "extents",
+    "langcode",
+    "audit_info",
+    "no_value"
+   ],
+   "required": false,
+   "type": "string"
+  },
+  "digital_object_component_browse_column_3": {
+   "enum": [
+    "title",
+    "publish",
+    "context",
+    "dates",
+    "extents",
+    "langcode",
+    "audit_info",
+    "no_value"
+   ],
+   "required": false,
+   "type": "string"
+  },
+  "digital_object_component_browse_column_4": {
+   "enum": [
+    "title",
+    "publish",
+    "context",
+    "dates",
+    "extents",
+    "langcode",
+    "audit_info",
+    "no_value"
+   ],
+   "required": false,
+   "type": "string"
+  },
+  "digital_object_component_browse_column_5": {
+   "enum": [
+    "title",
+    "publish",
+    "context",
+    "dates",
+    "extents",
+    "langcode",
+    "audit_info",
+    "no_value"
+   ],
+   "required": false,
+   "type": "string"
+  },
+  "digital_object_component_browse_column_6": {
+   "enum": [
+    "title",
+    "publish",
+    "context",
+    "dates",
+    "extents",
+    "langcode",
+    "audit_info",
+    "no_value"
+   ],
+   "required": false,
+   "type": "string"
+  },
+  "digital_object_component_browse_column_7": {
+   "enum": [
+    "title",
+    "publish",
+    "context",
+    "dates",
+    "extents",
+    "langcode",
+    "audit_info",
+    "no_value"
+   ],
+   "required": false,
+   "type": "string"
+  },
+  "digital_object_component_sort_column": {
+   "enum": [
+    "score",
+    "title",
+    "publish"
+   ],
+   "required": false,
+   "type": "string"
+  },
+  "digital_object_component_sort_direction": {
+   "enum": [
+    "asc",
+    "desc"
+   ],
+   "required": false,
+   "type": "string"
+  },
+  "digital_object_sort_column": {
+   "enum": [
+    "score",
+    "title",
+    "digital_object_id",
+    "publish",
+    "level",
+    "digital_object_type",
+    "restrictions",
+    "create_time",
+    "user_mtime"
+   ],
+   "required": false,
+   "type": "string"
+  },
+  "digital_object_sort_direction": {
+   "enum": [
+    "asc",
+    "desc"
+   ],
+   "required": false,
+   "type": "string"
+  },
+  "event_browse_column_1": {
+   "enum": [
+    "agents",
+    "event_type",
+    "outcome",
+    "linked_records",
+    "audit_info",
+    "no_value"
+   ],
+   "required": false,
+   "type": "string"
+  },
+  "event_browse_column_2": {
+   "enum": [
+    "agents",
+    "event_type",
+    "outcome",
+    "linked_records",
+    "audit_info",
+    "no_value"
+   ],
+   "required": false,
+   "type": "string"
+  },
+  "event_browse_column_3": {
+   "enum": [
+    "agents",
+    "event_type",
+    "outcome",
+    "linked_records",
+    "audit_info",
+    "no_value"
+   ],
+   "required": false,
+   "type": "string"
+  },
+  "event_browse_column_4": {
+   "enum": [
+    "agents",
+    "event_type",
+    "outcome",
+    "linked_records",
+    "audit_info",
+    "no_value"
+   ],
+   "required": false,
+   "type": "string"
+  },
+  "event_browse_column_5": {
+   "enum": [
+    "agents",
+    "event_type",
+    "outcome",
+    "linked_records",
+    "audit_info",
+    "no_value"
+   ],
+   "required": false,
+   "type": "string"
+  },
+  "event_browse_column_6": {
+   "enum": [
+    "agents",
+    "event_type",
+    "outcome",
+    "linked_records",
+    "audit_info",
+    "no_value"
+   ],
+   "required": false,
+   "type": "string"
+  },
+  "event_browse_column_7": {
+   "enum": [
+    "agents",
+    "event_type",
+    "outcome",
+    "linked_records",
+    "audit_info",
+    "no_value"
+   ],
+   "required": false,
+   "type": "string"
+  },
+  "event_sort_column": {
+   "enum": [
+    "score",
+    "event_type",
+    "outcome"
+   ],
+   "required": false,
+   "type": "string"
+  },
+  "event_sort_direction": {
+   "enum": [
+    "asc",
+    "desc"
+   ],
+   "required": false,
+   "type": "string"
+  },
+  "include_unpublished": {
+   "default": false,
+   "required": false,
+   "type": "boolean"
+  },
+  "job_browse_column_1": {
+   "enum": [
+    "status",
+    "job_report_type",
+    "job_data",
+    "time_started",
+    "time_finished",
+    "time_submitted",
+    "audit_info",
+    "no_value"
+   ],
+   "required": false,
+   "type": "string"
+  },
+  "job_browse_column_2": {
+   "enum": [
+    "status",
+    "job_report_type",
+    "job_data",
+    "time_started",
+    "time_finished",
+    "time_submitted",
+    "audit_info",
+    "no_value"
+   ],
+   "required": false,
+   "type": "string"
+  },
+  "job_browse_column_3": {
+   "enum": [
+    "status",
+    "job_report_type",
+    "job_data",
+    "time_started",
+    "time_finished",
+    "time_submitted",
+    "audit_info",
+    "no_value"
+   ],
+   "required": false,
+   "type": "string"
+  },
+  "job_browse_column_4": {
+   "enum": [
+    "status",
+    "job_report_type",
+    "job_data",
+    "time_started",
+    "time_finished",
+    "time_submitted",
+    "audit_info",
+    "no_value"
+   ],
+   "required": false,
+   "type": "string"
+  },
+  "job_browse_column_5": {
+   "enum": [
+    "status",
+    "job_report_type",
+    "job_data",
+    "time_started",
+    "time_finished",
+    "time_submitted",
+    "audit_info",
+    "no_value"
+   ],
+   "required": false,
+   "type": "string"
+  },
+  "job_browse_column_6": {
+   "enum": [
+    "status",
+    "job_report_type",
+    "job_data",
+    "time_started",
+    "time_finished",
+    "time_submitted",
+    "audit_info",
+    "no_value"
+   ],
+   "required": false,
+   "type": "string"
+  },
+  "job_browse_column_7": {
+   "enum": [
+    "status",
+    "job_report_type",
+    "job_data",
+    "time_started",
+    "time_finished",
+    "time_submitted",
+    "audit_info",
+    "no_value"
+   ],
+   "required": false,
+   "type": "string"
+  },
+  "job_sort_column": {
+   "enum": [
+    "score",
+    "status",
+    "job_report_type",
+    "time_started",
+    "time_finished",
+    "time_submitted"
+   ],
+   "required": false,
+   "type": "string"
+  },
+  "job_sort_direction": {
+   "enum": [
+    "asc",
+    "desc"
+   ],
+   "required": false,
+   "type": "string"
+  },
+  "jsonmodel_type": {
+   "ifmissing": "error",
+   "type": "string"
+  },
+  "last_modified_by": {
+   "readonly": true,
+   "type": "string"
+  },
+  "locale": {
+   "enum": [
+    "en",
+    "fr",
+    "de",
+    "ja",
+    "es"
+   ],
+   "required": false,
+   "type": "string"
+  },
+  "location_browse_column_1": {
+   "enum": [
+    "title",
+    "publish",
+    "building",
+    "floor",
+    "room",
+    "area",
+    "location_holdings",
+    "location_profile_display_string_u_ssort",
+    "owner_repo_display_string_u_ssort",
+    "temporary",
+    "audit_info",
+    "no_value"
+   ],
+   "required": false,
+   "type": "string"
+  },
+  "location_browse_column_2": {
+   "enum": [
+    "title",
+    "publish",
+    "building",
+    "floor",
+    "room",
+    "area",
+    "location_holdings",
+    "location_profile_display_string_u_ssort",
+    "owner_repo_display_string_u_ssort",
+    "temporary",
+    "audit_info",
+    "no_value"
+   ],
+   "required": false,
+   "type": "string"
+  },
+  "location_browse_column_3": {
+   "enum": [
+    "title",
+    "publish",
+    "building",
+    "floor",
+    "room",
+    "area",
+    "location_holdings",
+    "location_profile_display_string_u_ssort",
+    "owner_repo_display_string_u_ssort",
+    "temporary",
+    "audit_info",
+    "no_value"
+   ],
+   "required": false,
+   "type": "string"
+  },
+  "location_browse_column_4": {
+   "enum": [
+    "title",
+    "publish",
+    "building",
+    "floor",
+    "room",
+    "area",
+    "location_holdings",
+    "location_profile_display_string_u_ssort",
+    "owner_repo_display_string_u_ssort",
+    "temporary",
+    "audit_info",
+    "no_value"
+   ],
+   "required": false,
+   "type": "string"
+  },
+  "location_browse_column_5": {
+   "enum": [
+    "title",
+    "publish",
+    "building",
+    "floor",
+    "room",
+    "area",
+    "location_holdings",
+    "location_profile_display_string_u_ssort",
+    "owner_repo_display_string_u_ssort",
+    "temporary",
+    "audit_info",
+    "no_value"
+   ],
+   "required": false,
+   "type": "string"
+  },
+  "location_browse_column_6": {
+   "enum": [
+    "title",
+    "publish",
+    "building",
+    "floor",
+    "room",
+    "area",
+    "location_holdings",
+    "location_profile_display_string_u_ssort",
+    "owner_repo_display_string_u_ssort",
+    "temporary",
+    "audit_info",
+    "no_value"
+   ],
+   "required": false,
+   "type": "string"
+  },
+  "location_browse_column_7": {
+   "enum": [
+    "title",
+    "publish",
+    "building",
+    "floor",
+    "room",
+    "area",
+    "location_holdings",
+    "location_profile_display_string_u_ssort",
+    "owner_repo_display_string_u_ssort",
+    "temporary",
+    "audit_info",
+    "no_value"
+   ],
+   "required": false,
+   "type": "string"
+  },
+  "location_profile_browse_column_1": {
+   "enum": [
+    "title",
+    "location_profile_width_u_sstr",
+    "location_profile_height_u_sstr",
+    "location_profile_depth_u_sstr",
+    "location_profile_dimension_units_u_sstr",
+    "audit_info",
+    "no_value"
+   ],
+   "required": false,
+   "type": "string"
+  },
+  "location_profile_browse_column_2": {
+   "enum": [
+    "title",
+    "location_profile_width_u_sstr",
+    "location_profile_height_u_sstr",
+    "location_profile_depth_u_sstr",
+    "location_profile_dimension_units_u_sstr",
+    "audit_info",
+    "no_value"
+   ],
+   "required": false,
+   "type": "string"
+  },
+  "location_profile_browse_column_3": {
+   "enum": [
+    "title",
+    "location_profile_width_u_sstr",
+    "location_profile_height_u_sstr",
+    "location_profile_depth_u_sstr",
+    "location_profile_dimension_units_u_sstr",
+    "audit_info",
+    "no_value"
+   ],
+   "required": false,
+   "type": "string"
+  },
+  "location_profile_browse_column_4": {
+   "enum": [
+    "title",
+    "location_profile_width_u_sstr",
+    "location_profile_height_u_sstr",
+    "location_profile_depth_u_sstr",
+    "location_profile_dimension_units_u_sstr",
+    "audit_info",
+    "no_value"
+   ],
+   "required": false,
+   "type": "string"
+  },
+  "location_profile_browse_column_5": {
+   "enum": [
+    "title",
+    "location_profile_width_u_sstr",
+    "location_profile_height_u_sstr",
+    "location_profile_depth_u_sstr",
+    "location_profile_dimension_units_u_sstr",
+    "audit_info",
+    "no_value"
+   ],
+   "required": false,
+   "type": "string"
+  },
+  "location_profile_browse_column_6": {
+   "enum": [
+    "title",
+    "location_profile_width_u_sstr",
+    "location_profile_height_u_sstr",
+    "location_profile_depth_u_sstr",
+    "location_profile_dimension_units_u_sstr",
+    "audit_info",
+    "no_value"
+   ],
+   "required": false,
+   "type": "string"
+  },
+  "location_profile_browse_column_7": {
+   "enum": [
+    "title",
+    "location_profile_width_u_sstr",
+    "location_profile_height_u_sstr",
+    "location_profile_depth_u_sstr",
+    "location_profile_dimension_units_u_sstr",
+    "audit_info",
+    "no_value"
+   ],
+   "required": false,
+   "type": "string"
+  },
+  "location_profile_sort_column": {
+   "enum": [
+    "score",
+    "title"
+   ],
+   "required": false,
+   "type": "string"
+  },
+  "location_profile_sort_direction": {
+   "enum": [
+    "asc",
+    "desc"
+   ],
+   "required": false,
+   "type": "string"
+  },
+  "location_sort_column": {
+   "enum": [
+    "score",
+    "title",
+    "publish",
+    "building",
+    "floor",
+    "room",
+    "area",
+    "temporary"
+   ],
+   "required": false,
+   "type": "string"
+  },
+  "location_sort_direction": {
+   "enum": [
+    "asc",
+    "desc"
+   ],
+   "required": false,
+   "type": "string"
+  },
+  "lock_version": {
+   "required": false,
+   "type": [
+    "integer",
+    "string"
+   ]
+  },
+  "multi_browse_column_1": {
+   "enum": [
+    "primary_type",
+    "title",
+    "context",
+    "identifier",
+    "dates",
+    "extents",
+    "langcode",
+    "create_time",
+    "user_mtime",
+    "audit_info",
+    "no_value"
+   ],
+   "required": false,
+   "type": "string"
+  },
+  "multi_browse_column_2": {
+   "enum": [
+    "primary_type",
+    "title",
+    "context",
+    "identifier",
+    "dates",
+    "extents",
+    "langcode",
+    "create_time",
+    "user_mtime",
+    "audit_info",
+    "no_value"
+   ],
+   "required": false,
+   "type": "string"
+  },
+  "multi_browse_column_3": {
+   "enum": [
+    "primary_type",
+    "title",
+    "context",
+    "identifier",
+    "dates",
+    "extents",
+    "langcode",
+    "create_time",
+    "user_mtime",
+    "audit_info",
+    "no_value"
+   ],
+   "required": false,
+   "type": "string"
+  },
+  "multi_browse_column_4": {
+   "enum": [
+    "primary_type",
+    "title",
+    "context",
+    "identifier",
+    "dates",
+    "extents",
+    "langcode",
+    "create_time",
+    "user_mtime",
+    "audit_info",
+    "no_value"
+   ],
+   "required": false,
+   "type": "string"
+  },
+  "multi_browse_column_5": {
+   "enum": [
+    "primary_type",
+    "title",
+    "context",
+    "identifier",
+    "dates",
+    "extents",
+    "langcode",
+    "create_time",
+    "user_mtime",
+    "audit_info",
+    "no_value"
+   ],
+   "required": false,
+   "type": "string"
+  },
+  "multi_browse_column_6": {
+   "enum": [
+    "primary_type",
+    "title",
+    "context",
+    "identifier",
+    "dates",
+    "extents",
+    "langcode",
+    "create_time",
+    "user_mtime",
+    "audit_info",
+    "no_value"
+   ],
+   "required": false,
+   "type": "string"
+  },
+  "multi_browse_column_7": {
+   "enum": [
+    "primary_type",
+    "title",
+    "context",
+    "identifier",
+    "dates",
+    "extents",
+    "langcode",
+    "create_time",
+    "user_mtime",
+    "audit_info",
+    "no_value"
+   ],
+   "required": false,
+   "type": "string"
+  },
+  "multi_sort_column": {
+   "enum": [
+    "score",
+    "primary_type",
+    "title",
+    "identifier",
+    "create_time",
+    "user_mtime"
+   ],
+   "required": false,
+   "type": "string"
+  },
+  "multi_sort_direction": {
+   "enum": [
+    "asc",
+    "desc"
+   ],
+   "required": false,
+   "type": "string"
+  },
+  "note_order": {
+   "items": {
+    "type": "string"
+   },
+   "type": "array"
+  },
+  "publish": {
+   "default": false,
+   "required": false,
+   "type": "boolean"
+  },
+  "rde_sort_alpha": {
+   "default": true,
+   "required": false,
+   "type": "boolean"
+  },
+  "repositories_browse_column_1": {
+   "enum": [
+    "title",
+    "publish",
+    "audit_info",
+    "no_value"
+   ],
+   "required": false,
+   "type": "string"
+  },
+  "repositories_browse_column_2": {
+   "enum": [
+    "title",
+    "publish",
+    "audit_info",
+    "no_value"
+   ],
+   "required": false,
+   "type": "string"
+  },
+  "repositories_browse_column_3": {
+   "enum": [
+    "title",
+    "publish",
+    "audit_info",
+    "no_value"
+   ],
+   "required": false,
+   "type": "string"
+  },
+  "repositories_browse_column_4": {
+   "enum": [
+    "title",
+    "publish",
+    "audit_info",
+    "no_value"
+   ],
+   "required": false,
+   "type": "string"
+  },
+  "repositories_browse_column_5": {
+   "enum": [
+    "title",
+    "publish",
+    "audit_info",
+    "no_value"
+   ],
+   "required": false,
+   "type": "string"
+  },
+  "repositories_browse_column_6": {
+   "enum": [
+    "title",
+    "publish",
+    "audit_info",
+    "no_value"
+   ],
+   "required": false,
+   "type": "string"
+  },
+  "repositories_browse_column_7": {
+   "enum": [
+    "title",
+    "publish",
+    "audit_info",
+    "no_value"
+   ],
+   "required": false,
+   "type": "string"
+  },
+  "repositories_sort_column": {
+   "enum": [
+    "score",
+    "title",
+    "publish"
+   ],
+   "required": false,
+   "type": "string"
+  },
+  "repositories_sort_direction": {
+   "enum": [
+    "asc",
+    "desc"
+   ],
+   "required": false,
+   "type": "string"
+  },
+  "repository": {
+   "properties": {
+    "_resolved": {
+     "readonly": "true",
+     "type": "object"
+    },
+    "ref": {
+     "ifmissing": "error",
+     "readonly": "true",
+     "type": "JSONModel(:repository) uri"
+    }
+   },
+   "readonly": "true",
+   "subtype": "ref",
+   "type": "object"
+  },
+  "resource_browse_column_1": {
+   "enum": [
+    "title",
+    "identifier",
+    "level",
+    "resource_type",
+    "publish",
+    "restrictions",
+    "dates",
+    "extents",
+    "ead_id",
+    "finding_aid_status",
+    "langcode",
+    "processing_priority",
+    "processors",
+    "create_time",
+    "user_mtime",
+    "audit_info",
+    "no_value"
+   ],
+   "required": false,
+   "type": "string"
+  },
+  "resource_browse_column_2": {
+   "enum": [
+    "title",
+    "identifier",
+    "level",
+    "resource_type",
+    "publish",
+    "restrictions",
+    "dates",
+    "extents",
+    "ead_id",
+    "finding_aid_status",
+    "langcode",
+    "processing_priority",
+    "processors",
+    "create_time",
+    "user_mtime",
+    "audit_info",
+    "no_value"
+   ],
+   "required": false,
+   "type": "string"
+  },
+  "resource_browse_column_3": {
+   "enum": [
+    "title",
+    "identifier",
+    "level",
+    "resource_type",
+    "publish",
+    "restrictions",
+    "dates",
+    "extents",
+    "ead_id",
+    "finding_aid_status",
+    "langcode",
+    "processing_priority",
+    "processors",
+    "create_time",
+    "user_mtime",
+    "audit_info",
+    "no_value"
+   ],
+   "required": false,
+   "type": "string"
+  },
+  "resource_browse_column_4": {
+   "enum": [
+    "title",
+    "identifier",
+    "level",
+    "resource_type",
+    "publish",
+    "restrictions",
+    "dates",
+    "extents",
+    "ead_id",
+    "finding_aid_status",
+    "langcode",
+    "processing_priority",
+    "processors",
+    "create_time",
+    "user_mtime",
+    "audit_info",
+    "no_value"
+   ],
+   "required": false,
+   "type": "string"
+  },
+  "resource_browse_column_5": {
+   "enum": [
+    "title",
+    "identifier",
+    "level",
+    "resource_type",
+    "publish",
+    "restrictions",
+    "dates",
+    "extents",
+    "ead_id",
+    "finding_aid_status",
+    "langcode",
+    "processing_priority",
+    "processors",
+    "create_time",
+    "user_mtime",
+    "audit_info",
+    "no_value"
+   ],
+   "required": false,
+   "type": "string"
+  },
+  "resource_browse_column_6": {
+   "enum": [
+    "title",
+    "identifier",
+    "level",
+    "resource_type",
+    "publish",
+    "restrictions",
+    "dates",
+    "extents",
+    "ead_id",
+    "finding_aid_status",
+    "langcode",
+    "processing_priority",
+    "processors",
+    "create_time",
+    "user_mtime",
+    "audit_info",
+    "no_value"
+   ],
+   "required": false,
+   "type": "string"
+  },
+  "resource_browse_column_7": {
+   "enum": [
+    "title",
+    "identifier",
+    "level",
+    "resource_type",
+    "publish",
+    "restrictions",
+    "dates",
+    "extents",
+    "ead_id",
+    "finding_aid_status",
+    "langcode",
+    "processing_priority",
+    "processors",
+    "create_time",
+    "user_mtime",
+    "audit_info",
+    "no_value"
+   ],
+   "required": false,
+   "type": "string"
+  },
+  "resource_sort_column": {
+   "enum": [
+    "score",
+    "title",
+    "identifier",
+    "level",
+    "resource_type",
+    "publish",
+    "restrictions",
+    "ead_id",
+    "finding_aid_status",
+    "processing_priority",
+    "processors",
+    "create_time",
+    "user_mtime"
+   ],
+   "required": false,
+   "type": "string"
+  },
+  "resource_sort_direction": {
+   "enum": [
+    "asc",
+    "desc"
+   ],
+   "required": false,
+   "type": "string"
+  },
+  "show_suppressed": {
+   "default": false,
+   "required": false,
+   "type": "boolean"
+  },
+  "subject_browse_column_1": {
+   "enum": [
+    "title",
+    "source",
+    "first_term_type",
+    "audit_info",
+    "no_value"
+   ],
+   "required": false,
+   "type": "string"
+  },
+  "subject_browse_column_2": {
+   "enum": [
+    "title",
+    "source",
+    "first_term_type",
+    "audit_info",
+    "no_value"
+   ],
+   "required": false,
+   "type": "string"
+  },
+  "subject_browse_column_3": {
+   "enum": [
+    "title",
+    "source",
+    "first_term_type",
+    "audit_info",
+    "no_value"
+   ],
+   "required": false,
+   "type": "string"
+  },
+  "subject_browse_column_4": {
+   "enum": [
+    "title",
+    "source",
+    "first_term_type",
+    "audit_info",
+    "no_value"
+   ],
+   "required": false,
+   "type": "string"
+  },
+  "subject_browse_column_5": {
+   "enum": [
+    "title",
+    "source",
+    "first_term_type",
+    "audit_info",
+    "no_value"
+   ],
+   "required": false,
+   "type": "string"
+  },
+  "subject_browse_column_6": {
+   "enum": [
+    "title",
+    "source",
+    "first_term_type",
+    "audit_info",
+    "no_value"
+   ],
+   "required": false,
+   "type": "string"
+  },
+  "subject_browse_column_7": {
+   "enum": [
+    "title",
+    "source",
+    "first_term_type",
+    "audit_info",
+    "no_value"
+   ],
+   "required": false,
+   "type": "string"
+  },
+  "subject_sort_column": {
+   "enum": [
+    "score",
+    "title",
+    "source",
+    "first_term_type"
+   ],
+   "required": false,
+   "type": "string"
+  },
+  "subject_sort_direction": {
+   "enum": [
+    "asc",
+    "desc"
+   ],
+   "required": false,
+   "type": "string"
+  },
+  "system_mtime": {
+   "readonly": true,
+   "type": "date-time"
+  },
+  "top_container_browse_column_1": {
+   "enum": [
+    "title",
+    "container_profile_display_string_u_sstr",
+    "location_display_string_u_sstr",
+    "type",
+    "indicator",
+    "barcode",
+    "context",
+    "audit_info",
+    "no_value"
+   ],
+   "required": false,
+   "type": "string"
+  },
+  "top_container_browse_column_2": {
+   "enum": [
+    "title",
+    "container_profile_display_string_u_sstr",
+    "location_display_string_u_sstr",
+    "type",
+    "indicator",
+    "barcode",
+    "context",
+    "audit_info",
+    "no_value"
+   ],
+   "required": false,
+   "type": "string"
+  },
+  "top_container_browse_column_3": {
+   "enum": [
+    "title",
+    "container_profile_display_string_u_sstr",
+    "location_display_string_u_sstr",
+    "type",
+    "indicator",
+    "barcode",
+    "context",
+    "audit_info",
+    "no_value"
+   ],
+   "required": false,
+   "type": "string"
+  },
+  "top_container_browse_column_4": {
+   "enum": [
+    "title",
+    "container_profile_display_string_u_sstr",
+    "location_display_string_u_sstr",
+    "type",
+    "indicator",
+    "barcode",
+    "context",
+    "audit_info",
+    "no_value"
+   ],
+   "required": false,
+   "type": "string"
+  },
+  "top_container_browse_column_5": {
+   "enum": [
+    "title",
+    "container_profile_display_string_u_sstr",
+    "location_display_string_u_sstr",
+    "type",
+    "indicator",
+    "barcode",
+    "context",
+    "audit_info",
+    "no_value"
+   ],
+   "required": false,
+   "type": "string"
+  },
+  "top_container_browse_column_6": {
+   "enum": [
+    "title",
+    "container_profile_display_string_u_sstr",
+    "location_display_string_u_sstr",
+    "type",
+    "indicator",
+    "barcode",
+    "context",
+    "audit_info",
+    "no_value"
+   ],
+   "required": false,
+   "type": "string"
+  },
+  "top_container_browse_column_7": {
+   "enum": [
+    "title",
+    "container_profile_display_string_u_sstr",
+    "location_display_string_u_sstr",
+    "type",
+    "indicator",
+    "barcode",
+    "context",
+    "audit_info",
+    "no_value"
+   ],
+   "required": false,
+   "type": "string"
+  },
+  "top_container_sort_column": {
+   "enum": [
+    "score",
+    "title",
+    "type",
+    "indicator",
+    "barcode"
+   ],
+   "required": false,
+   "type": "string"
+  },
+  "top_container_sort_direction": {
+   "enum": [
+    "asc",
+    "desc"
+   ],
+   "required": false,
+   "type": "string"
+  },
+  "user_mtime": {
+   "readonly": true,
+   "type": "date-time"
+  }
+ },
+ "type": "object",
+ "version": 1
+}

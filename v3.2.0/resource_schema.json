@@ -1,0 +1,468 @@
+{
+ "$schema": "http://www.archivesspace.org/archivesspace.json",
+ "parent": "abstract_archival_object",
+ "properties": {
+  "ark_name": {
+   "readonly": true,
+   "required": false,
+   "type": "JSONModel(:ark_name) object"
+  },
+  "classifications": {
+   "items": {
+    "properties": {
+     "_resolved": {
+      "readonly": "true",
+      "type": "object"
+     },
+     "ref": {
+      "ifmissing": "error",
+      "type": [
+       {
+        "type": "JSONModel(:classification) uri"
+       },
+       {
+        "type": "JSONModel(:classification_term) uri"
+       }
+      ]
+     }
+    },
+    "subtype": "ref",
+    "type": "object"
+   },
+   "type": "array"
+  },
+  "collection_management": {
+   "type": "JSONModel(:collection_management) object"
+  },
+  "create_time": {
+   "readonly": true,
+   "type": "date-time"
+  },
+  "created_by": {
+   "readonly": true,
+   "type": "string"
+  },
+  "dates": {
+   "ifmissing": "error",
+   "items": {
+    "type": "JSONModel(:date) object"
+   },
+   "minItems": 1,
+   "type": "array"
+  },
+  "deaccessions": {
+   "items": {
+    "type": "JSONModel(:deaccession) object"
+   },
+   "type": "array"
+  },
+  "ead_id": {
+   "maxLength": 255,
+   "type": "string"
+  },
+  "ead_location": {
+   "maxLength": 255,
+   "type": "string"
+  },
+  "extents": {
+   "ifmissing": "error",
+   "items": {
+    "type": "JSONModel(:extent) object"
+   },
+   "minItems": 1,
+   "type": "array"
+  },
+  "external_ark_url": {
+   "required": false,
+   "type": "string"
+  },
+  "external_documents": {
+   "items": {
+    "type": "JSONModel(:external_document) object"
+   },
+   "type": "array"
+  },
+  "external_ids": {
+   "items": {
+    "type": "JSONModel(:external_id) object"
+   },
+   "type": "array"
+  },
+  "finding_aid_author": {
+   "maxLength": 65000,
+   "type": "string"
+  },
+  "finding_aid_date": {
+   "maxLength": 255,
+   "type": "string"
+  },
+  "finding_aid_description_rules": {
+   "dynamic_enum": "resource_finding_aid_description_rules",
+   "type": "string"
+  },
+  "finding_aid_edition_statement": {
+   "maxLength": 65000,
+   "type": "string"
+  },
+  "finding_aid_filing_title": {
+   "maxLength": 65000,
+   "type": "string"
+  },
+  "finding_aid_language": {
+   "dynamic_enum": "language_iso639_2",
+   "ifmissing": "error",
+   "type": "string"
+  },
+  "finding_aid_language_note": {
+   "maxLength": 65000,
+   "type": "string"
+  },
+  "finding_aid_note": {
+   "maxLength": 65000,
+   "type": "string"
+  },
+  "finding_aid_script": {
+   "dynamic_enum": "script_iso15924",
+   "ifmissing": "error",
+   "type": "string"
+  },
+  "finding_aid_series_statement": {
+   "maxLength": 65000,
+   "type": "string"
+  },
+  "finding_aid_sponsor": {
+   "maxLength": 65000,
+   "type": "string"
+  },
+  "finding_aid_status": {
+   "dynamic_enum": "resource_finding_aid_status",
+   "type": "string"
+  },
+  "finding_aid_subtitle": {
+   "maxLength": 65000,
+   "type": "string"
+  },
+  "finding_aid_title": {
+   "maxLength": 65000,
+   "type": "string"
+  },
+  "id_0": {
+   "ifmissing": "error",
+   "maxLength": 255,
+   "type": "string"
+  },
+  "id_1": {
+   "maxLength": 255,
+   "type": "string"
+  },
+  "id_2": {
+   "maxLength": 255,
+   "type": "string"
+  },
+  "id_3": {
+   "maxLength": 255,
+   "type": "string"
+  },
+  "import_current_ark": {
+   "type": "string"
+  },
+  "import_previous_arks": {
+   "items": {
+    "type": "string"
+   },
+   "type": "array"
+  },
+  "instances": {
+   "items": {
+    "type": "JSONModel(:instance) object"
+   },
+   "type": "array"
+  },
+  "is_slug_auto": {
+   "default": true,
+   "type": "boolean"
+  },
+  "jsonmodel_type": {
+   "ifmissing": "error",
+   "type": "string"
+  },
+  "lang_materials": {
+   "ifmissing": "error",
+   "items": {
+    "type": "JSONModel(:lang_material) object"
+   },
+   "minItems": 1,
+   "type": "array"
+  },
+  "last_modified_by": {
+   "readonly": true,
+   "type": "string"
+  },
+  "level": {
+   "dynamic_enum": "archival_record_level",
+   "ifmissing": "error",
+   "type": "string"
+  },
+  "linked_agents": {
+   "items": {
+    "properties": {
+     "_inherited": {
+      "properties": {
+       "direct": {
+        "type": "boolean"
+       },
+       "level": {
+        "type": "string"
+       },
+       "ref": {
+        "type": "string"
+       }
+      },
+      "subtype": "ref",
+      "type": "object"
+     },
+     "_resolved": {
+      "readonly": "true",
+      "type": "object"
+     },
+     "ref": {
+      "ifmissing": "error",
+      "type": [
+       {
+        "type": "JSONModel(:agent_corporate_entity) uri"
+       },
+       {
+        "type": "JSONModel(:agent_family) uri"
+       },
+       {
+        "type": "JSONModel(:agent_person) uri"
+       },
+       {
+        "type": "JSONModel(:agent_software) uri"
+       }
+      ]
+     },
+     "relator": {
+      "dynamic_enum": "linked_agent_archival_record_relators",
+      "type": "string"
+     },
+     "role": {
+      "dynamic_enum": "linked_agent_role",
+      "ifmissing": "error",
+      "type": "string"
+     },
+     "terms": {
+      "items": {
+       "type": "JSONModel(:term) uri_or_object"
+      },
+      "type": "array"
+     },
+     "title": {
+      "type": "string"
+     }
+    },
+    "subtype": "ref",
+    "type": "object"
+   },
+   "type": "array"
+  },
+  "linked_events": {
+   "items": {
+    "properties": {
+     "_resolved": {
+      "readonly": "true",
+      "type": "object"
+     },
+     "ref": {
+      "ifmissing": "error",
+      "type": "JSONModel(:event) uri"
+     }
+    },
+    "subtype": "ref",
+    "type": "object"
+   },
+   "readonly": "true",
+   "type": "array"
+  },
+  "lock_version": {
+   "required": false,
+   "type": [
+    "integer",
+    "string"
+   ]
+  },
+  "metadata_rights_declarations": {
+   "items": {
+    "type": "JSONModel(:metadata_rights_declaration) object"
+   },
+   "type": "array"
+  },
+  "notes": {
+   "items": {
+    "type": [
+     {
+      "type": "JSONModel(:note_bibliography) object"
+     },
+     {
+      "type": "JSONModel(:note_index) object"
+     },
+     {
+      "type": "JSONModel(:note_multipart) object"
+     },
+     {
+      "type": "JSONModel(:note_singlepart) object"
+     }
+    ]
+   },
+   "type": "array"
+  },
+  "other_level": {
+   "maxLength": 255,
+   "type": "string"
+  },
+  "publish": {
+   "type": "boolean"
+  },
+  "related_accessions": {
+   "items": {
+    "properties": {
+     "_resolved": {
+      "readonly": "true",
+      "type": "object"
+     },
+     "ref": {
+      "ifmissing": "error",
+      "type": [
+       {
+        "type": "JSONModel(:accession) uri"
+       }
+      ]
+     }
+    },
+    "subtype": "ref",
+    "type": "object"
+   },
+   "type": "array"
+  },
+  "repository": {
+   "properties": {
+    "_resolved": {
+     "readonly": "true",
+     "type": "object"
+    },
+    "ref": {
+     "ifmissing": "error",
+     "readonly": "true",
+     "type": "JSONModel(:repository) uri"
+    }
+   },
+   "readonly": "true",
+   "subtype": "ref",
+   "type": "object"
+  },
+  "repository_processing_note": {
+   "maxLength": 65000,
+   "type": "string"
+  },
+  "representative_image": {
+   "readonly": true,
+   "type": "JSONModel(:file_version) object"
+  },
+  "resource_type": {
+   "dynamic_enum": "resource_resource_type",
+   "type": "string"
+  },
+  "restrictions": {
+   "default": false,
+   "type": "boolean"
+  },
+  "revision_statements": {
+   "items": {
+    "type": "JSONModel(:revision_statement) object"
+   },
+   "type": "array"
+  },
+  "rights_statements": {
+   "items": {
+    "type": "JSONModel(:rights_statement) object"
+   },
+   "type": "array"
+  },
+  "slug": {
+   "type": "string"
+  },
+  "subjects": {
+   "items": {
+    "properties": {
+     "_resolved": {
+      "readonly": "true",
+      "type": "object"
+     },
+     "ref": {
+      "ifmissing": "error",
+      "type": "JSONModel(:subject) uri"
+     }
+    },
+    "subtype": "ref",
+    "type": "object"
+   },
+   "type": "array"
+  },
+  "suppressed": {
+   "readonly": "true",
+   "type": "boolean"
+  },
+  "system_mtime": {
+   "readonly": true,
+   "type": "date-time"
+  },
+  "title": {
+   "ifmissing": "error",
+   "maxLength": 16384,
+   "minLength": 1,
+   "type": "string"
+  },
+  "tree": {
+   "properties": {
+    "_resolved": {
+     "readonly": "true",
+     "type": "object"
+    },
+    "ref": {
+     "ifmissing": "error",
+     "type": "JSONModel(:resource_tree) uri"
+    }
+   },
+   "subtype": "ref",
+   "type": "object"
+  },
+  "uri": {
+   "required": false,
+   "type": "string"
+  },
+  "user_defined": {
+   "type": "JSONModel(:user_defined) object"
+  },
+  "user_mtime": {
+   "readonly": true,
+   "type": "date-time"
+  }
+ },
+ "type": "object",
+ "uri": "/repositories/:repo_id/resources",
+ "validations": [
+  [
+   "error",
+   "resource_check_identifier"
+  ],
+  [
+   "error",
+   "check_language"
+  ],
+  [
+   "error",
+   "check_resource_otherlevel"
+  ]
+ ],
+ "version": 1
+}

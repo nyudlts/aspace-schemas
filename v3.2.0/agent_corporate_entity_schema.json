@@ -1,0 +1,353 @@
+{
+ "$schema": "http://www.archivesspace.org/archivesspace.json",
+ "parent": "abstract_agent",
+ "properties": {
+  "agent_alternate_sets": {
+   "items": {
+    "type": "JSONModel(:agent_alternate_set) object"
+   },
+   "required": false,
+   "tags": [
+    "agent_subrecord"
+   ],
+   "type": "array"
+  },
+  "agent_contacts": {
+   "items": {
+    "type": "JSONModel(:agent_contact) object"
+   },
+   "type": "array"
+  },
+  "agent_conventions_declarations": {
+   "items": {
+    "type": "JSONModel(:agent_conventions_declaration) object"
+   },
+   "required": false,
+   "tags": [
+    "agent_subrecord"
+   ],
+   "type": "array"
+  },
+  "agent_functions": {
+   "items": {
+    "type": "JSONModel(:agent_function) object"
+   },
+   "required": false,
+   "tags": [
+    "agent_subrecord"
+   ],
+   "type": "array"
+  },
+  "agent_identifiers": {
+   "items": {
+    "type": "JSONModel(:agent_identifier) object"
+   },
+   "required": false,
+   "tags": [
+    "agent_subrecord"
+   ],
+   "type": "array"
+  },
+  "agent_maintenance_histories": {
+   "items": {
+    "type": "JSONModel(:agent_maintenance_history) object"
+   },
+   "required": false,
+   "tags": [
+    "agent_subrecord"
+   ],
+   "type": "array"
+  },
+  "agent_occupations": {
+   "items": {
+    "type": "JSONModel(:agent_occupation) object"
+   },
+   "required": false,
+   "tags": [
+    "agent_subrecord"
+   ],
+   "type": "array"
+  },
+  "agent_other_agency_codes": {
+   "items": {
+    "type": "JSONModel(:agent_other_agency_codes) object"
+   },
+   "required": false,
+   "tags": [
+    "agent_subrecord"
+   ],
+   "type": "array"
+  },
+  "agent_places": {
+   "items": {
+    "type": "JSONModel(:agent_place) object"
+   },
+   "required": false,
+   "tags": [
+    "agent_subrecord"
+   ],
+   "type": "array"
+  },
+  "agent_record_controls": {
+   "items": {
+    "type": "JSONModel(:agent_record_control) object"
+   },
+   "required": false,
+   "tags": [
+    "agent_subrecord"
+   ],
+   "type": "array"
+  },
+  "agent_record_identifiers": {
+   "items": {
+    "type": "JSONModel(:agent_record_identifier) object"
+   },
+   "required": false,
+   "tags": [
+    "agent_subrecord"
+   ],
+   "type": "array"
+  },
+  "agent_resources": {
+   "items": {
+    "type": "JSONModel(:agent_resource) object"
+   },
+   "required": false,
+   "tags": [
+    "agent_subrecord"
+   ],
+   "type": "array"
+  },
+  "agent_sources": {
+   "items": {
+    "type": "JSONModel(:agent_sources) object"
+   },
+   "required": false,
+   "tags": [
+    "agent_subrecord"
+   ],
+   "type": "array"
+  },
+  "agent_topics": {
+   "items": {
+    "type": "JSONModel(:agent_topic) object"
+   },
+   "required": false,
+   "tags": [
+    "agent_subrecord"
+   ],
+   "type": "array"
+  },
+  "agent_type": {
+   "enum": [
+    "agent_person",
+    "agent_corporate_entity",
+    "agent_software",
+    "agent_family",
+    "user"
+   ],
+   "required": false,
+   "type": "string"
+  },
+  "create_time": {
+   "readonly": true,
+   "type": "date-time"
+  },
+  "created_by": {
+   "readonly": true,
+   "type": "string"
+  },
+  "dates_of_existence": {
+   "items": {
+    "type": "JSONModel(:structured_date_label) object"
+   },
+   "type": "array"
+  },
+  "display_name": {
+   "readonly": true,
+   "type": "JSONModel(:name_corporate_entity) object"
+  },
+  "external_documents": {
+   "items": {
+    "type": "JSONModel(:external_document) object"
+   },
+   "type": "array"
+  },
+  "is_linked_to_published_record": {
+   "readonly": true,
+   "type": "boolean"
+  },
+  "is_repo_agent": {
+   "readonly": true,
+   "type": "string"
+  },
+  "is_slug_auto": {
+   "default": true,
+   "type": "boolean"
+  },
+  "is_user": {
+   "readonly": true,
+   "type": "string"
+  },
+  "jsonmodel_type": {
+   "ifmissing": "error",
+   "type": "string"
+  },
+  "last_modified_by": {
+   "readonly": true,
+   "type": "string"
+  },
+  "linked_agent_roles": {
+   "items": {
+    "type": "string"
+   },
+   "readonly": true,
+   "type": "array"
+  },
+  "lock_version": {
+   "required": false,
+   "type": [
+    "integer",
+    "string"
+   ]
+  },
+  "metadata_rights_declarations": {
+   "items": {
+    "type": "JSONModel(:metadata_rights_declaration) object"
+   },
+   "type": "array"
+  },
+  "names": {
+   "ifmissing": "error",
+   "items": {
+    "type": "JSONModel(:name_corporate_entity) object"
+   },
+   "minItems": 1,
+   "type": "array"
+  },
+  "notes": {
+   "items": {
+    "type": [
+     {
+      "type": "JSONModel(:note_bioghist) object"
+     },
+     {
+      "type": "JSONModel(:note_mandate) object"
+     },
+     {
+      "type": "JSONModel(:note_legal_status) object"
+     },
+     {
+      "type": "JSONModel(:note_structure_or_genealogy) object"
+     },
+     {
+      "type": "JSONModel(:note_general_context) object"
+     }
+    ]
+   },
+   "type": "array"
+  },
+  "publish": {
+   "type": "boolean"
+  },
+  "related_agents": {
+   "items": {
+    "type": [
+     {
+      "type": "JSONModel(:agent_relationship_subordinatesuperior) object"
+     },
+     {
+      "type": "JSONModel(:agent_relationship_earlierlater) object"
+     },
+     {
+      "type": "JSONModel(:agent_relationship_identity) object"
+     },
+     {
+      "type": "JSONModel(:agent_relationship_hierarchical) object"
+     },
+     {
+      "type": "JSONModel(:agent_relationship_temporal) object"
+     },
+     {
+      "type": "JSONModel(:agent_relationship_family) object"
+     },
+     {
+      "type": "JSONModel(:agent_relationship_associative) object"
+     }
+    ]
+   },
+   "type": "array"
+  },
+  "repository": {
+   "properties": {
+    "_resolved": {
+     "readonly": "true",
+     "type": "object"
+    },
+    "ref": {
+     "ifmissing": "error",
+     "readonly": "true",
+     "type": "JSONModel(:repository) uri"
+    }
+   },
+   "readonly": "true",
+   "subtype": "ref",
+   "type": "object"
+  },
+  "slug": {
+   "type": "string"
+  },
+  "system_generated": {
+   "readonly": true,
+   "type": "boolean"
+  },
+  "system_mtime": {
+   "readonly": true,
+   "type": "date-time"
+  },
+  "title": {
+   "readonly": true,
+   "type": "string"
+  },
+  "uri": {
+   "required": false,
+   "type": "string"
+  },
+  "used_languages": {
+   "items": {
+    "type": "JSONModel(:used_language) object"
+   },
+   "tags": [
+    "agent_subrecord"
+   ],
+   "type": "array"
+  },
+  "used_within_published_repositories": {
+   "items": {
+    "type": "JSONModel(:repository) uri"
+   },
+   "readonly": true,
+   "type": "array"
+  },
+  "used_within_repositories": {
+   "items": {
+    "type": "JSONModel(:repository) uri"
+   },
+   "readonly": true,
+   "type": "array"
+  },
+  "user_mtime": {
+   "readonly": true,
+   "type": "date-time"
+  }
+ },
+ "type": "object",
+ "uri": "/agents/corporate_entities",
+ "validations": [
+  [
+   "error",
+   "check_agent_corporate_entity"
+  ]
+ ],
+ "version": 1
+}

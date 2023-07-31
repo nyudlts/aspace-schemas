@@ -1,0 +1,198 @@
+{
+ "$schema": "http://www.archivesspace.org/archivesspace.json",
+ "properties": {
+  "active_restrictions": {
+   "items": {
+    "type": "JSONModel(:rights_restriction) object"
+   },
+   "readonly": "true",
+   "type": "array"
+  },
+  "barcode": {
+   "maxLength": 255,
+   "type": "string"
+  },
+  "collection": {
+   "items": {
+    "properties": {
+     "_resolved": {
+      "readonly": "true",
+      "type": "object"
+     },
+     "display_string": {
+      "type": "string"
+     },
+     "identifier": {
+      "type": "string"
+     },
+     "ref": {
+      "type": [
+       {
+        "type": "JSONModel(:resource) uri"
+       },
+       {
+        "type": "JSONModel(:accession) uri"
+       }
+      ]
+     }
+    },
+    "subtype": "ref",
+    "type": "object"
+   },
+   "readonly": "true",
+   "type": "array"
+  },
+  "container_locations": {
+   "items": {
+    "type": "JSONModel(:container_location) object"
+   },
+   "type": "array"
+  },
+  "container_profile": {
+   "properties": {
+    "_resolved": {
+     "readonly": "true",
+     "type": "object"
+    },
+    "ref": {
+     "type": "JSONModel(:container_profile) uri"
+    }
+   },
+   "subtype": "ref",
+   "type": "object"
+  },
+  "create_time": {
+   "readonly": true,
+   "type": "date-time"
+  },
+  "created_by": {
+   "readonly": true,
+   "type": "string"
+  },
+  "created_for_collection": {
+   "maxLength": 255,
+   "required": false,
+   "type": "string"
+  },
+  "display_string": {
+   "readonly": true,
+   "type": "string"
+  },
+  "exported_to_ils": {
+   "required": false,
+   "type": "string"
+  },
+  "ils_holding_id": {
+   "maxLength": 255,
+   "required": false,
+   "type": "string"
+  },
+  "ils_item_id": {
+   "maxLength": 255,
+   "required": false,
+   "type": "string"
+  },
+  "indicator": {
+   "ifmissing": "error",
+   "maxLength": 255,
+   "minLength": 1,
+   "type": "string"
+  },
+  "is_linked_to_published_record": {
+   "readonly": true,
+   "type": "boolean"
+  },
+  "jsonmodel_type": {
+   "ifmissing": "error",
+   "type": "string"
+  },
+  "last_modified_by": {
+   "readonly": true,
+   "type": "string"
+  },
+  "lock_version": {
+   "required": false,
+   "type": [
+    "integer",
+    "string"
+   ]
+  },
+  "long_display_string": {
+   "readonly": true,
+   "type": "string"
+  },
+  "repository": {
+   "properties": {
+    "_resolved": {
+     "readonly": "true",
+     "type": "object"
+    },
+    "ref": {
+     "ifmissing": "error",
+     "readonly": "true",
+     "type": "JSONModel(:repository) uri"
+    }
+   },
+   "readonly": "true",
+   "subtype": "ref",
+   "type": "object"
+  },
+  "restricted": {
+   "readonly": "true",
+   "type": "boolean"
+  },
+  "series": {
+   "items": {
+    "properties": {
+     "_resolved": {
+      "readonly": "true",
+      "type": "object"
+     },
+     "display_string": {
+      "type": "string"
+     },
+     "identifier": {
+      "type": "string"
+     },
+     "level_display_string": {
+      "type": "string"
+     },
+     "publish": {
+      "type": "boolean"
+     },
+     "ref": {
+      "type": "JSONModel(:archival_object) uri"
+     }
+    },
+    "subtype": "ref",
+    "type": "object"
+   },
+   "readonly": "true",
+   "type": "array"
+  },
+  "subcontainer_barcodes": {
+   "required": false,
+   "type": "string"
+  },
+  "system_mtime": {
+   "readonly": true,
+   "type": "date-time"
+  },
+  "type": {
+   "dynamic_enum": "container_type",
+   "required": false,
+   "type": "string"
+  },
+  "uri": {
+   "required": false,
+   "type": "string"
+  },
+  "user_mtime": {
+   "readonly": true,
+   "type": "date-time"
+  }
+ },
+ "type": "object",
+ "uri": "/repositories/:repo_id/top_containers",
+ "version": 1
+}

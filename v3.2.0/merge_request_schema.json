@@ -1,0 +1,146 @@
+{
+ "$schema": "http://www.archivesspace.org/archivesspace.json",
+ "properties": {
+  "create_time": {
+   "readonly": true,
+   "type": "date-time"
+  },
+  "created_by": {
+   "readonly": true,
+   "type": "string"
+  },
+  "jsonmodel_type": {
+   "ifmissing": "error",
+   "type": "string"
+  },
+  "last_modified_by": {
+   "readonly": true,
+   "type": "string"
+  },
+  "lock_version": {
+   "required": false,
+   "type": [
+    "integer",
+    "string"
+   ]
+  },
+  "repository": {
+   "properties": {
+    "_resolved": {
+     "readonly": "true",
+     "type": "object"
+    },
+    "ref": {
+     "ifmissing": "error",
+     "readonly": "true",
+     "type": "JSONModel(:repository) uri"
+    }
+   },
+   "readonly": "true",
+   "subtype": "ref",
+   "type": "object"
+  },
+  "system_mtime": {
+   "readonly": true,
+   "type": "date-time"
+  },
+  "target": {
+   "ifmissing": "error",
+   "properties": {
+    "ref": {
+     "ifmissing": "error",
+     "type": [
+      {
+       "type": "JSONModel(:subject) uri"
+      },
+      {
+       "type": "JSONModel(:agent_person) uri"
+      },
+      {
+       "type": "JSONModel(:agent_corporate_entity) uri"
+      },
+      {
+       "type": "JSONModel(:agent_software) uri"
+      },
+      {
+       "type": "JSONModel(:agent_family) uri"
+      },
+      {
+       "type": "JSONModel(:resource) uri"
+      },
+      {
+       "type": "JSONModel(:top_container) uri"
+      },
+      {
+       "type": "JSONModel(:container_profile) uri"
+      },
+      {
+       "type": "JSONModel(:top_container) uri"
+      },
+      {
+       "type": "JSONModel(:digital_object) uri"
+      }
+     ]
+    }
+   },
+   "subtype": "ref",
+   "type": "object"
+  },
+  "uri": {
+   "required": false,
+   "type": "string"
+  },
+  "user_mtime": {
+   "readonly": true,
+   "type": "date-time"
+  },
+  "victims": {
+   "items": {
+    "properties": {
+     "ref": {
+      "ifmissing": "error",
+      "type": [
+       {
+        "type": "JSONModel(:subject) uri"
+       },
+       {
+        "type": "JSONModel(:agent_person) uri"
+       },
+       {
+        "type": "JSONModel(:agent_corporate_entity) uri"
+       },
+       {
+        "type": "JSONModel(:agent_software) uri"
+       },
+       {
+        "type": "JSONModel(:agent_family) uri"
+       },
+       {
+        "type": "JSONModel(:resource) uri"
+       },
+       {
+        "type": "JSONModel(:top_container) uri"
+       },
+       {
+        "type": "JSONModel(:container_profile) uri"
+       },
+       {
+        "type": "JSONModel(:top_container) uri"
+       },
+       {
+        "type": "JSONModel(:digital_object) uri"
+       }
+      ]
+     }
+    },
+    "subtype": "ref",
+    "type": "object"
+   },
+   "minItems": 1,
+   "type": "array"
+  }
+ },
+ "type": "object",
+ "uri": "/merge_requests/:record_type",
+ "version": 1
+}

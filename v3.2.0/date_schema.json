@@ -1,0 +1,109 @@
+{
+ "$schema": "http://www.archivesspace.org/archivesspace.json",
+ "properties": {
+  "_inherited": {
+   "properties": {
+    "direct": {
+     "type": "boolean"
+    },
+    "level": {
+     "type": "string"
+    },
+    "ref": {
+     "type": "string"
+    }
+   },
+   "subtype": "ref",
+   "type": "object"
+  },
+  "begin": {
+   "maxLength": 255,
+   "type": "string"
+  },
+  "calendar": {
+   "dynamic_enum": "date_calendar",
+   "type": "string"
+  },
+  "certainty": {
+   "dynamic_enum": "date_certainty",
+   "type": "string"
+  },
+  "create_time": {
+   "readonly": true,
+   "type": "date-time"
+  },
+  "created_by": {
+   "readonly": true,
+   "type": "string"
+  },
+  "date_type": {
+   "dynamic_enum": "date_type",
+   "ifmissing": "error",
+   "type": "string"
+  },
+  "end": {
+   "maxLength": 255,
+   "type": "string"
+  },
+  "era": {
+   "dynamic_enum": "date_era",
+   "type": "string"
+  },
+  "expression": {
+   "maxLength": 255,
+   "type": "string"
+  },
+  "jsonmodel_type": {
+   "ifmissing": "error",
+   "type": "string"
+  },
+  "label": {
+   "dynamic_enum": "date_label",
+   "ifmissing": "error",
+   "type": "string"
+  },
+  "last_modified_by": {
+   "readonly": true,
+   "type": "string"
+  },
+  "lock_version": {
+   "required": false,
+   "type": [
+    "integer",
+    "string"
+   ]
+  },
+  "repository": {
+   "properties": {
+    "_resolved": {
+     "readonly": "true",
+     "type": "object"
+    },
+    "ref": {
+     "ifmissing": "error",
+     "readonly": "true",
+     "type": "JSONModel(:repository) uri"
+    }
+   },
+   "readonly": "true",
+   "subtype": "ref",
+   "type": "object"
+  },
+  "system_mtime": {
+   "readonly": true,
+   "type": "date-time"
+  },
+  "user_mtime": {
+   "readonly": true,
+   "type": "date-time"
+  }
+ },
+ "type": "object",
+ "validations": [
+  [
+   "error",
+   "check_date"
+  ]
+ ],
+ "version": 1
+}

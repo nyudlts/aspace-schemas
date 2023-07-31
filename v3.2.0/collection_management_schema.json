@@ -1,0 +1,144 @@
+{
+ "$schema": "http://www.archivesspace.org/archivesspace.json",
+ "properties": {
+  "create_time": {
+   "readonly": true,
+   "type": "date-time"
+  },
+  "created_by": {
+   "readonly": true,
+   "type": "string"
+  },
+  "external_ids": {
+   "items": {
+    "type": "JSONModel(:external_id) object"
+   },
+   "type": "array"
+  },
+  "jsonmodel_type": {
+   "ifmissing": "error",
+   "type": "string"
+  },
+  "last_modified_by": {
+   "readonly": true,
+   "type": "string"
+  },
+  "lock_version": {
+   "required": false,
+   "type": [
+    "integer",
+    "string"
+   ]
+  },
+  "parent": {
+   "properties": {
+    "_resolved": {
+     "readonly": "true",
+     "type": "object"
+    },
+    "ref": {
+     "type": [
+      {
+       "type": "JSONModel(:resource) uri"
+      },
+      {
+       "type": "JSONModel(:digital_object) uri"
+      },
+      {
+       "type": "JSONModel(:accession) uri"
+      }
+     ]
+    }
+   },
+   "readonly": "true",
+   "subtype": "ref",
+   "type": "object"
+  },
+  "processing_funding_source": {
+   "maxLength": 65000,
+   "required": false,
+   "type": "string"
+  },
+  "processing_hours_per_foot_estimate": {
+   "maxLength": 255,
+   "required": false,
+   "type": "string"
+  },
+  "processing_hours_total": {
+   "maxLength": 255,
+   "required": false,
+   "type": "string"
+  },
+  "processing_plan": {
+   "maxLength": 65000,
+   "required": false,
+   "type": "string"
+  },
+  "processing_priority": {
+   "dynamic_enum": "collection_management_processing_priority",
+   "required": false,
+   "type": "string"
+  },
+  "processing_status": {
+   "dynamic_enum": "collection_management_processing_status",
+   "required": false,
+   "type": "string"
+  },
+  "processing_total_extent": {
+   "maxLength": 255,
+   "required": false,
+   "type": "string"
+  },
+  "processing_total_extent_type": {
+   "dynamic_enum": "extent_extent_type",
+   "required": false,
+   "type": "string"
+  },
+  "processors": {
+   "maxLength": 65000,
+   "required": false,
+   "type": "string"
+  },
+  "repository": {
+   "properties": {
+    "_resolved": {
+     "readonly": "true",
+     "type": "object"
+    },
+    "ref": {
+     "ifmissing": "error",
+     "readonly": "true",
+     "type": "JSONModel(:repository) uri"
+    }
+   },
+   "readonly": "true",
+   "subtype": "ref",
+   "type": "object"
+  },
+  "rights_determined": {
+   "default": false,
+   "type": "boolean"
+  },
+  "system_mtime": {
+   "readonly": true,
+   "type": "date-time"
+  },
+  "uri": {
+   "required": false,
+   "type": "string"
+  },
+  "user_mtime": {
+   "readonly": true,
+   "type": "date-time"
+  }
+ },
+ "type": "object",
+ "uri": "/repositories/:repo_id/collection_management",
+ "validations": [
+  [
+   "error",
+   "check_collection_management"
+  ]
+ ],
+ "version": 1
+}

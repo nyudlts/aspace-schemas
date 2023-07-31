@@ -1,0 +1,376 @@
+{
+ "$schema": "http://www.archivesspace.org/archivesspace.json",
+ "properties": {
+  "access_restrictions": {
+   "default": false,
+   "type": "boolean"
+  },
+  "access_restrictions_note": {
+   "maxLength": 65000,
+   "type": "string"
+  },
+  "accession_date": {
+   "default": "9999-12-31",
+   "minLength": 1,
+   "type": "date"
+  },
+  "acquisition_type": {
+   "dynamic_enum": "accession_acquisition_type",
+   "type": "string"
+  },
+  "classifications": {
+   "items": {
+    "properties": {
+     "_resolved": {
+      "readonly": "true",
+      "type": "object"
+     },
+     "ref": {
+      "ifmissing": "error",
+      "type": [
+       {
+        "type": "JSONModel(:classification) uri"
+       },
+       {
+        "type": "JSONModel(:classification_term) uri"
+       }
+      ]
+     }
+    },
+    "subtype": "ref",
+    "type": "object"
+   },
+   "type": "array"
+  },
+  "collection_management": {
+   "type": "JSONModel(:collection_management) object"
+  },
+  "condition_description": {
+   "maxLength": 65000,
+   "type": "string"
+  },
+  "content_description": {
+   "maxLength": 65000,
+   "type": "string"
+  },
+  "create_time": {
+   "readonly": true,
+   "type": "date-time"
+  },
+  "created_by": {
+   "readonly": true,
+   "type": "string"
+  },
+  "dates": {
+   "items": {
+    "type": "JSONModel(:date) object"
+   },
+   "type": "array"
+  },
+  "deaccessions": {
+   "items": {
+    "type": "JSONModel(:deaccession) object"
+   },
+   "type": "array"
+  },
+  "display_string": {
+   "maxLength": 8192,
+   "readonly": true,
+   "type": "string"
+  },
+  "disposition": {
+   "maxLength": 65000,
+   "type": "string"
+  },
+  "extents": {
+   "items": {
+    "type": "JSONModel(:extent) object"
+   },
+   "type": "array"
+  },
+  "external_documents": {
+   "items": {
+    "type": "JSONModel(:external_document) object"
+   },
+   "type": "array"
+  },
+  "external_ids": {
+   "items": {
+    "type": "JSONModel(:external_id) object"
+   },
+   "type": "array"
+  },
+  "general_note": {
+   "maxLength": 65000,
+   "type": "string"
+  },
+  "id_0": {
+   "ifmissing": "error",
+   "maxLength": 255,
+   "type": "string"
+  },
+  "id_1": {
+   "maxLength": 255,
+   "type": "string"
+  },
+  "id_2": {
+   "maxLength": 255,
+   "type": "string"
+  },
+  "id_3": {
+   "maxLength": 255,
+   "type": "string"
+  },
+  "instances": {
+   "items": {
+    "type": "JSONModel(:instance) object"
+   },
+   "type": "array"
+  },
+  "inventory": {
+   "maxLength": 65000,
+   "type": "string"
+  },
+  "is_slug_auto": {
+   "default": true,
+   "type": "boolean"
+  },
+  "jsonmodel_type": {
+   "ifmissing": "error",
+   "type": "string"
+  },
+  "lang_materials": {
+   "items": {
+    "type": "JSONModel(:lang_material) object"
+   },
+   "type": "array"
+  },
+  "language": {
+   "dynamic_enum": "language_iso639_2",
+   "type": "string"
+  },
+  "last_modified_by": {
+   "readonly": true,
+   "type": "string"
+  },
+  "linked_agents": {
+   "items": {
+    "properties": {
+     "_resolved": {
+      "readonly": "true",
+      "type": "object"
+     },
+     "ref": {
+      "ifmissing": "error",
+      "type": [
+       {
+        "type": "JSONModel(:agent_corporate_entity) uri"
+       },
+       {
+        "type": "JSONModel(:agent_family) uri"
+       },
+       {
+        "type": "JSONModel(:agent_person) uri"
+       },
+       {
+        "type": "JSONModel(:agent_software) uri"
+       }
+      ]
+     },
+     "relator": {
+      "dynamic_enum": "linked_agent_archival_record_relators",
+      "type": "string"
+     },
+     "role": {
+      "dynamic_enum": "linked_agent_role",
+      "ifmissing": "error",
+      "type": "string"
+     },
+     "terms": {
+      "items": {
+       "type": "JSONModel(:term) uri_or_object"
+      },
+      "type": "array"
+     },
+     "title": {
+      "type": "string"
+     }
+    },
+    "subtype": "ref",
+    "type": "object"
+   },
+   "type": "array"
+  },
+  "linked_events": {
+   "items": {
+    "properties": {
+     "_resolved": {
+      "readonly": "true",
+      "type": "object"
+     },
+     "ref": {
+      "ifmissing": "error",
+      "type": "JSONModel(:event) uri"
+     }
+    },
+    "subtype": "ref",
+    "type": "object"
+   },
+   "readonly": "true",
+   "type": "array"
+  },
+  "lock_version": {
+   "required": false,
+   "type": [
+    "integer",
+    "string"
+   ]
+  },
+  "metadata_rights_declarations": {
+   "items": {
+    "type": "JSONModel(:metadata_rights_declaration) object"
+   },
+   "type": "array"
+  },
+  "provenance": {
+   "maxLength": 65000,
+   "type": "string"
+  },
+  "publish": {
+   "type": "boolean"
+  },
+  "related_accessions": {
+   "items": {
+    "type": [
+     {
+      "type": "JSONModel(:accession_parts_relationship) object"
+     },
+     {
+      "type": "JSONModel(:accession_sibling_relationship) object"
+     }
+    ]
+   },
+   "type": "array"
+  },
+  "related_resources": {
+   "items": {
+    "properties": {
+     "_resolved": {
+      "readonly": "true",
+      "type": "object"
+     },
+     "ref": {
+      "ifmissing": "error",
+      "type": [
+       {
+        "type": "JSONModel(:resource) uri"
+       }
+      ]
+     }
+    },
+    "subtype": "ref",
+    "type": "object"
+   },
+   "type": "array"
+  },
+  "repository": {
+   "properties": {
+    "_resolved": {
+     "readonly": "true",
+     "type": "object"
+    },
+    "ref": {
+     "ifmissing": "error",
+     "readonly": "true",
+     "type": "JSONModel(:repository) uri"
+    }
+   },
+   "readonly": "true",
+   "subtype": "ref",
+   "type": "object"
+  },
+  "resource_type": {
+   "dynamic_enum": "accession_resource_type",
+   "type": "string"
+  },
+  "restrictions_apply": {
+   "default": false,
+   "type": "boolean"
+  },
+  "retention_rule": {
+   "maxLength": 65000,
+   "type": "string"
+  },
+  "rights_statements": {
+   "items": {
+    "type": "JSONModel(:rights_statement) object"
+   },
+   "type": "array"
+  },
+  "script": {
+   "dynamic_enum": "script_iso15924",
+   "type": "string"
+  },
+  "slug": {
+   "type": "string"
+  },
+  "subjects": {
+   "items": {
+    "properties": {
+     "_resolved": {
+      "readonly": "true",
+      "type": "object"
+     },
+     "ref": {
+      "ifmissing": "error",
+      "type": "JSONModel(:subject) uri"
+     }
+    },
+    "subtype": "ref",
+    "type": "object"
+   },
+   "type": "array"
+  },
+  "suppressed": {
+   "readonly": "true",
+   "type": "boolean"
+  },
+  "system_mtime": {
+   "readonly": true,
+   "type": "date-time"
+  },
+  "title": {
+   "ifmissing": null,
+   "maxLength": 8192,
+   "type": "string"
+  },
+  "uri": {
+   "required": false,
+   "type": "string"
+  },
+  "use_restrictions": {
+   "default": false,
+   "type": "boolean"
+  },
+  "use_restrictions_note": {
+   "maxLength": 65000,
+   "type": "string"
+  },
+  "user_defined": {
+   "type": "JSONModel(:user_defined) object"
+  },
+  "user_mtime": {
+   "readonly": true,
+   "type": "date-time"
+  }
+ },
+ "type": "object",
+ "uri": "/repositories/:repo_id/accessions",
+ "validations": [
+  [
+   "error",
+   "accession_check_identifier"
+  ]
+ ],
+ "version": 1
+}

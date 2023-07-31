@@ -1,0 +1,99 @@
+{
+ "$schema": "http://www.archivesspace.org/archivesspace.json",
+ "properties": {
+  "create_time": {
+   "readonly": true,
+   "type": "date-time"
+  },
+  "created_by": {
+   "readonly": true,
+   "type": "string"
+  },
+  "dates": {
+   "maxLength": 255,
+   "type": "string"
+  },
+  "jsonmodel_type": {
+   "ifmissing": "error",
+   "type": "string"
+  },
+  "language": {
+   "dynamic_enum": "language_iso639_2",
+   "required": false,
+   "type": "string"
+  },
+  "last_modified_by": {
+   "readonly": true,
+   "type": "string"
+  },
+  "lock_version": {
+   "required": false,
+   "type": [
+    "integer",
+    "string"
+   ]
+  },
+  "qualifier": {
+   "maxLength": 255,
+   "type": "string"
+  },
+  "repository": {
+   "properties": {
+    "_resolved": {
+     "readonly": "true",
+     "type": "object"
+    },
+    "ref": {
+     "ifmissing": "error",
+     "readonly": "true",
+     "type": "JSONModel(:repository) uri"
+    }
+   },
+   "readonly": "true",
+   "subtype": "ref",
+   "type": "object"
+  },
+  "rules": {
+   "dynamic_enum": "name_rule",
+   "type": "string"
+  },
+  "script": {
+   "dynamic_enum": "script_iso15924",
+   "required": false,
+   "type": "string"
+  },
+  "sort_name": {
+   "maxLength": 255,
+   "type": "string"
+  },
+  "sort_name_auto_generate": {
+   "default": true,
+   "type": "boolean"
+  },
+  "source": {
+   "dynamic_enum": "name_source",
+   "type": "string"
+  },
+  "system_mtime": {
+   "readonly": true,
+   "type": "date-time"
+  },
+  "transliteration": {
+   "dynamic_enum": "transliteration",
+   "required": false,
+   "type": "string"
+  },
+  "use_dates": {
+   "items": {
+    "type": "JSONModel(:structured_date_label) object"
+   },
+   "type": "array"
+  },
+  "user_mtime": {
+   "readonly": true,
+   "type": "date-time"
+  }
+ },
+ "type": "object",
+ "version": 1
+}

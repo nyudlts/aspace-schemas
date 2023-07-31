@@ -1,0 +1,125 @@
+{
+ "$schema": "http://www.archivesspace.org/archivesspace.json",
+ "properties": {
+  "agency_name": {
+   "maxLength": 65000,
+   "type": "string"
+  },
+  "cataloging_source": {
+   "dynamic_enum": "cataloging_source",
+   "required": false,
+   "type": "string"
+  },
+  "create_time": {
+   "readonly": true,
+   "type": "date-time"
+  },
+  "created_by": {
+   "readonly": true,
+   "type": "string"
+  },
+  "government_agency_type": {
+   "dynamic_enum": "government_agency_type",
+   "required": false,
+   "type": "string"
+  },
+  "jsonmodel_type": {
+   "ifmissing": "error",
+   "type": "string"
+  },
+  "language": {
+   "dynamic_enum": "language_iso639_2",
+   "required": false,
+   "type": "string"
+  },
+  "language_note": {
+   "maxLength": 65000,
+   "type": "string"
+  },
+  "last_modified_by": {
+   "readonly": true,
+   "type": "string"
+  },
+  "level_of_detail": {
+   "dynamic_enum": "level_of_detail",
+   "required": false,
+   "type": "string"
+  },
+  "lock_version": {
+   "required": false,
+   "type": [
+    "integer",
+    "string"
+   ]
+  },
+  "maintenance_agency": {
+   "maxLength": 65000,
+   "type": "string"
+  },
+  "maintenance_agency_note": {
+   "maxLength": 65000,
+   "type": "string"
+  },
+  "maintenance_status": {
+   "dynamic_enum": "maintenance_status",
+   "ifmissing": "error",
+   "type": "string"
+  },
+  "modified_record": {
+   "dynamic_enum": "modified_record",
+   "required": false,
+   "type": "string"
+  },
+  "name_type": {
+   "dynamic_enum": "name_type",
+   "required": false,
+   "type": "string"
+  },
+  "publication_status": {
+   "dynamic_enum": "publication_status",
+   "required": false,
+   "type": "string"
+  },
+  "reference_evaluation": {
+   "dynamic_enum": "reference_evaluation",
+   "required": false,
+   "type": "string"
+  },
+  "repository": {
+   "properties": {
+    "_resolved": {
+     "readonly": "true",
+     "type": "object"
+    },
+    "ref": {
+     "ifmissing": "error",
+     "readonly": "true",
+     "type": "JSONModel(:repository) uri"
+    }
+   },
+   "readonly": "true",
+   "subtype": "ref",
+   "type": "object"
+  },
+  "romanization": {
+   "dynamic_enum": "romanization",
+   "required": false,
+   "type": "string"
+  },
+  "script": {
+   "dynamic_enum": "script_iso15924",
+   "required": false,
+   "type": "string"
+  },
+  "system_mtime": {
+   "readonly": true,
+   "type": "date-time"
+  },
+  "user_mtime": {
+   "readonly": true,
+   "type": "date-time"
+  }
+ },
+ "type": "object",
+ "version": 1
+}

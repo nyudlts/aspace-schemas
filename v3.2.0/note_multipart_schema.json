@@ -1,0 +1,122 @@
+{
+ "$schema": "http://www.archivesspace.org/archivesspace.json",
+ "parent": "abstract_note",
+ "properties": {
+  "_inherited": {
+   "properties": {
+    "direct": {
+     "type": "boolean"
+    },
+    "level": {
+     "type": "string"
+    },
+    "ref": {
+     "type": "string"
+    }
+   },
+   "subtype": "ref",
+   "type": "object"
+  },
+  "create_time": {
+   "readonly": true,
+   "type": "date-time"
+  },
+  "created_by": {
+   "readonly": true,
+   "type": "string"
+  },
+  "ingest_problem": {
+   "maxLength": 65000,
+   "type": "string"
+  },
+  "jsonmodel_type": {
+   "ifmissing": "error",
+   "type": "string"
+  },
+  "label": {
+   "maxLength": 65000,
+   "type": "string"
+  },
+  "last_modified_by": {
+   "readonly": true,
+   "type": "string"
+  },
+  "lock_version": {
+   "required": false,
+   "type": [
+    "integer",
+    "string"
+   ]
+  },
+  "persistent_id": {
+   "maxLength": 255,
+   "type": "string"
+  },
+  "publish": {
+   "type": "boolean"
+  },
+  "repository": {
+   "properties": {
+    "_resolved": {
+     "readonly": "true",
+     "type": "object"
+    },
+    "ref": {
+     "ifmissing": "error",
+     "readonly": "true",
+     "type": "JSONModel(:repository) uri"
+    }
+   },
+   "readonly": "true",
+   "subtype": "ref",
+   "type": "object"
+  },
+  "rights_restriction": {
+   "type": "JSONModel(:rights_restriction) object"
+  },
+  "subnotes": {
+   "items": {
+    "type": [
+     {
+      "type": "JSONModel(:note_chronology) object"
+     },
+     {
+      "type": "JSONModel(:note_orderedlist) object"
+     },
+     {
+      "type": "JSONModel(:note_definedlist) object"
+     },
+     {
+      "type": "JSONModel(:note_text) object"
+     }
+    ]
+   },
+   "type": "array"
+  },
+  "system_mtime": {
+   "readonly": true,
+   "type": "date-time"
+  },
+  "type": {
+   "dynamic_enum": "note_multipart_type",
+   "ifmissing": "error",
+   "type": "string"
+  },
+  "user_mtime": {
+   "readonly": true,
+   "type": "date-time"
+  }
+ },
+ "type": "object",
+ "validations": [
+  [
+   "error",
+   "note_multipart_check_at_least_one_subnote"
+  ],
+  [
+   "error",
+   "check_restriction_date"
+  ]
+ ],
+ "version": 1
+}

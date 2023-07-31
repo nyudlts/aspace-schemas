@@ -1,0 +1,93 @@
+{
+ "$schema": "http://www.archivesspace.org/archivesspace.json",
+ "properties": {
+  "create_time": {
+   "readonly": true,
+   "type": "date-time"
+  },
+  "created_by": {
+   "readonly": true,
+   "type": "string"
+  },
+  "descriptive_note": {
+   "default": "",
+   "maxLength": 65000,
+   "type": "string"
+  },
+  "file_uri": {
+   "maxLength": 65000,
+   "type": "string"
+  },
+  "file_version_xlink_actuate_attribute": {
+   "dynamic_enum": "file_version_xlink_actuate_attribute",
+   "required": false,
+   "type": "string"
+  },
+  "file_version_xlink_show_attribute": {
+   "dynamic_enum": "file_version_xlink_show_attribute",
+   "required": false,
+   "type": "string"
+  },
+  "jsonmodel_type": {
+   "ifmissing": "error",
+   "type": "string"
+  },
+  "last_modified_by": {
+   "readonly": true,
+   "type": "string"
+  },
+  "last_verified_date": {
+   "type": "date-time"
+  },
+  "license": {
+   "dynamic_enum": "metadata_license",
+   "required": false,
+   "type": "string"
+  },
+  "lock_version": {
+   "required": false,
+   "type": [
+    "integer",
+    "string"
+   ]
+  },
+  "repository": {
+   "properties": {
+    "_resolved": {
+     "readonly": "true",
+     "type": "object"
+    },
+    "ref": {
+     "ifmissing": "error",
+     "readonly": "true",
+     "type": "JSONModel(:repository) uri"
+    }
+   },
+   "readonly": "true",
+   "subtype": "ref",
+   "type": "object"
+  },
+  "system_mtime": {
+   "readonly": true,
+   "type": "date-time"
+  },
+  "user_mtime": {
+   "readonly": true,
+   "type": "date-time"
+  },
+  "xlink_arcrole_attribute": {
+   "maxLength": 65000,
+   "type": "string"
+  },
+  "xlink_role_attribute": {
+   "maxLength": 65000,
+   "type": "string"
+  },
+  "xlink_title_attribute": {
+   "maxLength": 65000,
+   "type": "string"
+  }
+ },
+ "type": "object",
+ "version": 1
+}

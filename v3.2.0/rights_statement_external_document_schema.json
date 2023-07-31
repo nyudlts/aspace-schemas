@@ -1,0 +1,82 @@
+{
+ "$schema": "http://www.archivesspace.org/archivesspace.json",
+ "parent": "external_document",
+ "properties": {
+  "create_time": {
+   "readonly": true,
+   "type": "date-time"
+  },
+  "created_by": {
+   "readonly": true,
+   "type": "string"
+  },
+  "identifier_type": {
+   "dynamic_enum": "rights_statement_external_document_identifier_type",
+   "ifmissing": "error",
+   "minLength": 1,
+   "type": "string"
+  },
+  "jsonmodel_type": {
+   "ifmissing": "error",
+   "type": "string"
+  },
+  "last_modified_by": {
+   "readonly": true,
+   "type": "string"
+  },
+  "location": {
+   "default": "",
+   "ifmissing": "error",
+   "maxLength": 16384,
+   "type": "string"
+  },
+  "lock_version": {
+   "required": false,
+   "type": [
+    "integer",
+    "string"
+   ]
+  },
+  "publish": {
+   "type": "boolean"
+  },
+  "repository": {
+   "properties": {
+    "_resolved": {
+     "readonly": "true",
+     "type": "object"
+    },
+    "ref": {
+     "ifmissing": "error",
+     "readonly": "true",
+     "type": "JSONModel(:repository) uri"
+    }
+   },
+   "readonly": "true",
+   "subtype": "ref",
+   "type": "object"
+  },
+  "system_mtime": {
+   "readonly": true,
+   "type": "date-time"
+  },
+  "title": {
+   "ifmissing": "error",
+   "maxLength": 16384,
+   "minLength": 1,
+   "type": "string"
+  },
+  "user_mtime": {
+   "readonly": true,
+   "type": "date-time"
+  }
+ },
+ "type": "object",
+ "validations": [
+  [
+   "error",
+   "check_rights_statement_external_document"
+  ]
+ ],
+ "version": 1
+}

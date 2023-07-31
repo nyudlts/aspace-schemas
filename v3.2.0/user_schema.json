@@ -1,0 +1,142 @@
+{
+ "$schema": "http://www.archivesspace.org/archivesspace.json",
+ "properties": {
+  "additional_contact": {
+   "maxLength": 65000,
+   "type": "string"
+  },
+  "agent_record": {
+   "properties": {
+    "_resolved": {
+     "readonly": "true",
+     "type": "object"
+    },
+    "ref": {
+     "type": [
+      {
+       "type": "JSONModel(:agent_person) uri"
+      },
+      {
+       "type": "JSONModel(:agent_software) uri"
+      }
+     ]
+    }
+   },
+   "readonly": true,
+   "subtype": "ref",
+   "type": "object"
+  },
+  "create_time": {
+   "readonly": true,
+   "type": "date-time"
+  },
+  "created_by": {
+   "readonly": true,
+   "type": "string"
+  },
+  "department": {
+   "maxLength": 255,
+   "type": "string"
+  },
+  "email": {
+   "maxLength": 255,
+   "type": "string"
+  },
+  "first_name": {
+   "maxLength": 255,
+   "type": "string"
+  },
+  "groups": {
+   "items": {
+    "type": "JSONModel(:group) uri"
+   },
+   "type": "array"
+  },
+  "is_active_user": {
+   "default": true,
+   "type": "boolean"
+  },
+  "is_admin": {
+   "default": false,
+   "type": "boolean"
+  },
+  "is_system_user": {
+   "readonly": true,
+   "type": "boolean"
+  },
+  "jsonmodel_type": {
+   "ifmissing": "error",
+   "type": "string"
+  },
+  "last_modified_by": {
+   "readonly": true,
+   "type": "string"
+  },
+  "last_name": {
+   "maxLength": 255,
+   "type": "string"
+  },
+  "lock_version": {
+   "required": false,
+   "type": [
+    "integer",
+    "string"
+   ]
+  },
+  "name": {
+   "ifmissing": "error",
+   "maxLength": 255,
+   "minLength": 1,
+   "type": "string"
+  },
+  "permissions": {
+   "readonly": true,
+   "type": "object"
+  },
+  "repository": {
+   "properties": {
+    "_resolved": {
+     "readonly": "true",
+     "type": "object"
+    },
+    "ref": {
+     "ifmissing": "error",
+     "readonly": "true",
+     "type": "JSONModel(:repository) uri"
+    }
+   },
+   "readonly": "true",
+   "subtype": "ref",
+   "type": "object"
+  },
+  "system_mtime": {
+   "readonly": true,
+   "type": "date-time"
+  },
+  "telephone": {
+   "maxLength": 255,
+   "type": "string"
+  },
+  "title": {
+   "maxLength": 255,
+   "type": "string"
+  },
+  "uri": {
+   "required": false,
+   "type": "string"
+  },
+  "user_mtime": {
+   "readonly": true,
+   "type": "date-time"
+  },
+  "username": {
+   "ifmissing": "error",
+   "maxLength": 255,
+   "minLength": 1,
+   "type": "string"
+  }
+ },
+ "type": "object",
+ "uri": "/users",
+ "version": 1
+}

@@ -1,0 +1,157 @@
+{
+ "$schema": "http://www.archivesspace.org/archivesspace.json",
+ "properties": {
+  "acts": {
+   "items": {
+    "type": "JSONModel(:rights_statement_act) object"
+   },
+   "type": "array"
+  },
+  "create_time": {
+   "readonly": true,
+   "type": "date-time"
+  },
+  "created_by": {
+   "readonly": true,
+   "type": "string"
+  },
+  "determination_date": {
+   "required": false,
+   "type": "date"
+  },
+  "end_date": {
+   "required": false,
+   "type": "date"
+  },
+  "external_documents": {
+   "items": {
+    "type": "JSONModel(:rights_statement_external_document) object"
+   },
+   "type": "array"
+  },
+  "identifier": {
+   "maxLength": 255,
+   "minLength": 1,
+   "required": false,
+   "type": "string"
+  },
+  "jsonmodel_type": {
+   "ifmissing": "error",
+   "type": "string"
+  },
+  "jurisdiction": {
+   "dynamic_enum": "country_iso_3166",
+   "required": false,
+   "type": "string"
+  },
+  "last_modified_by": {
+   "readonly": true,
+   "type": "string"
+  },
+  "license_terms": {
+   "maxLength": 255,
+   "required": false,
+   "type": "string"
+  },
+  "linked_agents": {
+   "items": {
+    "properties": {
+     "_resolved": {
+      "readonly": "true",
+      "type": "object"
+     },
+     "ref": {
+      "ifmissing": "error",
+      "type": [
+       {
+        "type": "JSONModel(:agent_corporate_entity) uri"
+       },
+       {
+        "type": "JSONModel(:agent_family) uri"
+       },
+       {
+        "type": "JSONModel(:agent_person) uri"
+       },
+       {
+        "type": "JSONModel(:agent_software) uri"
+       }
+      ]
+     }
+    },
+    "subtype": "ref",
+    "type": "object"
+   },
+   "type": "array"
+  },
+  "lock_version": {
+   "required": false,
+   "type": [
+    "integer",
+    "string"
+   ]
+  },
+  "notes": {
+   "items": {
+    "type": "JSONModel(:note_rights_statement) object"
+   },
+   "type": "array"
+  },
+  "other_rights_basis": {
+   "dynamic_enum": "rights_statement_other_rights_basis",
+   "required": false,
+   "type": "string"
+  },
+  "repository": {
+   "properties": {
+    "_resolved": {
+     "readonly": "true",
+     "type": "object"
+    },
+    "ref": {
+     "ifmissing": "error",
+     "readonly": "true",
+     "type": "JSONModel(:repository) uri"
+    }
+   },
+   "readonly": "true",
+   "subtype": "ref",
+   "type": "object"
+  },
+  "rights_type": {
+   "dynamic_enum": "rights_statement_rights_type",
+   "ifmissing": "error",
+   "minLength": 1,
+   "type": "string"
+  },
+  "start_date": {
+   "required": false,
+   "type": "date"
+  },
+  "status": {
+   "dynamic_enum": "rights_statement_ip_status",
+   "required": false,
+   "type": "string"
+  },
+  "statute_citation": {
+   "maxLength": 255,
+   "required": false,
+   "type": "string"
+  },
+  "system_mtime": {
+   "readonly": true,
+   "type": "date-time"
+  },
+  "user_mtime": {
+   "readonly": true,
+   "type": "date-time"
+  }
+ },
+ "type": "object",
+ "validations": [
+  [
+   "error",
+   "check_rights_statement"
+  ]
+ ],
+ "version": 1
+}

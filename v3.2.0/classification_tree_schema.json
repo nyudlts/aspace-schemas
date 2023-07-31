@@ -1,0 +1,100 @@
+{
+ "$schema": "http://www.archivesspace.org/archivesspace.json",
+ "parent": "record_tree",
+ "properties": {
+  "children": {
+   "additionalItems": false,
+   "items": {
+    "type": "JSONModel(:classification_tree) object"
+   },
+   "type": "array"
+  },
+  "create_time": {
+   "readonly": true,
+   "type": "date-time"
+  },
+  "created_by": {
+   "readonly": true,
+   "type": "string"
+  },
+  "has_children": {
+   "readonly": true,
+   "type": "boolean"
+  },
+  "id": {
+   "ifmissing": "error",
+   "type": "integer"
+  },
+  "identifier": {
+   "maxLength": 255,
+   "type": "string"
+  },
+  "jsonmodel_type": {
+   "ifmissing": "error",
+   "type": "string"
+  },
+  "last_modified_by": {
+   "readonly": true,
+   "type": "string"
+  },
+  "lock_version": {
+   "required": false,
+   "type": [
+    "integer",
+    "string"
+   ]
+  },
+  "node_type": {
+   "maxLength": 255,
+   "type": "string"
+  },
+  "publish": {
+   "type": "boolean"
+  },
+  "record_uri": {
+   "ifmissing": "error",
+   "type": "string"
+  },
+  "repository": {
+   "properties": {
+    "_resolved": {
+     "readonly": "true",
+     "type": "object"
+    },
+    "ref": {
+     "ifmissing": "error",
+     "readonly": "true",
+     "type": "JSONModel(:repository) uri"
+    }
+   },
+   "readonly": "true",
+   "subtype": "ref",
+   "type": "object"
+  },
+  "suppressed": {
+   "default": false,
+   "type": "boolean"
+  },
+  "system_mtime": {
+   "readonly": true,
+   "type": "date-time"
+  },
+  "title": {
+   "maxLength": 16384,
+   "minLength": 1,
+   "required": false,
+   "type": "string"
+  },
+  "uri": {
+   "required": false,
+   "type": "string"
+  },
+  "user_mtime": {
+   "readonly": true,
+   "type": "date-time"
+  }
+ },
+ "type": "object",
+ "uri": "/repositories/:repo_id/classifications/:classification_id/tree",
+ "version": 1
+}

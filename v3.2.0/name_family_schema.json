@@ -1,0 +1,145 @@
+{
+ "$schema": "http://www.archivesspace.org/archivesspace.json",
+ "parent": "abstract_name",
+ "properties": {
+  "authority_id": {
+   "maxLength": 255,
+   "type": "string"
+  },
+  "authorized": {
+   "default": false,
+   "type": "boolean"
+  },
+  "create_time": {
+   "readonly": true,
+   "type": "date-time"
+  },
+  "created_by": {
+   "readonly": true,
+   "type": "string"
+  },
+  "dates": {
+   "maxLength": 255,
+   "type": "string"
+  },
+  "family_name": {
+   "ifmissing": "error",
+   "maxLength": 65000,
+   "type": "string"
+  },
+  "family_type": {
+   "maxLength": 65000,
+   "type": "string"
+  },
+  "is_display_name": {
+   "default": false,
+   "type": "boolean"
+  },
+  "jsonmodel_type": {
+   "ifmissing": "error",
+   "type": "string"
+  },
+  "language": {
+   "dynamic_enum": "language_iso639_2",
+   "required": false,
+   "type": "string"
+  },
+  "last_modified_by": {
+   "readonly": true,
+   "type": "string"
+  },
+  "location": {
+   "maxLength": 65000,
+   "type": "string"
+  },
+  "lock_version": {
+   "required": false,
+   "type": [
+    "integer",
+    "string"
+   ]
+  },
+  "parallel_names": {
+   "items": {
+    "type": "JSONModel(:parallel_name_family) object"
+   },
+   "type": "array"
+  },
+  "prefix": {
+   "maxLength": 65000,
+   "type": "string"
+  },
+  "qualifier": {
+   "maxLength": 255,
+   "type": "string"
+  },
+  "repository": {
+   "properties": {
+    "_resolved": {
+     "readonly": "true",
+     "type": "object"
+    },
+    "ref": {
+     "ifmissing": "error",
+     "readonly": "true",
+     "type": "JSONModel(:repository) uri"
+    }
+   },
+   "readonly": "true",
+   "subtype": "ref",
+   "type": "object"
+  },
+  "rules": {
+   "dynamic_enum": "name_rule",
+   "type": "string"
+  },
+  "script": {
+   "dynamic_enum": "script_iso15924",
+   "required": false,
+   "type": "string"
+  },
+  "sort_name": {
+   "maxLength": 255,
+   "type": "string"
+  },
+  "sort_name_auto_generate": {
+   "default": true,
+   "type": "boolean"
+  },
+  "source": {
+   "dynamic_enum": "name_source",
+   "type": "string"
+  },
+  "system_mtime": {
+   "readonly": true,
+   "type": "date-time"
+  },
+  "transliteration": {
+   "dynamic_enum": "transliteration",
+   "required": false,
+   "type": "string"
+  },
+  "use_dates": {
+   "items": {
+    "type": "JSONModel(:structured_date_label) object"
+   },
+   "type": "array"
+  },
+  "user_mtime": {
+   "readonly": true,
+   "type": "date-time"
+  }
+ },
+ "type": "object",
+ "validations": [
+  [
+   "error",
+   "name_family_check_name"
+  ],
+  [
+   "warning",
+   "name_family_check_authority_id"
+  ]
+ ],
+ "version": 1
+}

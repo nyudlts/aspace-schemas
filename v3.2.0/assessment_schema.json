@@ -1,0 +1,283 @@
+{
+ "$schema": "http://www.archivesspace.org/archivesspace.json",
+ "properties": {
+  "accession_report": {
+   "type": "boolean"
+  },
+  "appraisal": {
+   "type": "boolean"
+  },
+  "catalog_record": {
+   "type": "boolean"
+  },
+  "collections": {
+   "items": {
+    "properties": {
+     "_resolved": {
+      "readonly": "true",
+      "type": "object"
+     },
+     "ref": {
+      "type": [
+       {
+        "type": "JSONModel(:resource) uri"
+       }
+      ]
+     }
+    },
+    "subtype": "ref",
+    "type": "object"
+   },
+   "readonly": "true",
+   "type": "array"
+  },
+  "conservation_issues": {
+   "items": {
+    "type": "JSONModel(:assessment_attribute) object"
+   },
+   "type": "array"
+  },
+  "conservation_note": {
+   "type": "string"
+  },
+  "container_list": {
+   "type": "boolean"
+  },
+  "control_file": {
+   "type": "boolean"
+  },
+  "create_time": {
+   "readonly": true,
+   "type": "date-time"
+  },
+  "created_by": {
+   "readonly": true,
+   "type": "string"
+  },
+  "deed_of_gift": {
+   "type": "boolean"
+  },
+  "display_string": {
+   "maxLength": 8192,
+   "readonly": true,
+   "type": "string"
+  },
+  "exhibition_value_note": {
+   "type": "string"
+  },
+  "existing_description_notes": {
+   "type": "string"
+  },
+  "external_documents": {
+   "items": {
+    "type": "JSONModel(:external_document) object"
+   },
+   "type": "array"
+  },
+  "finding_aid_ead": {
+   "type": "boolean"
+  },
+  "finding_aid_online": {
+   "type": "boolean"
+  },
+  "finding_aid_paper": {
+   "type": "boolean"
+  },
+  "finding_aid_spreadsheet": {
+   "type": "boolean"
+  },
+  "finding_aid_word": {
+   "type": "boolean"
+  },
+  "formats": {
+   "items": {
+    "type": "JSONModel(:assessment_attribute) object"
+   },
+   "type": "array"
+  },
+  "general_assessment_note": {
+   "type": "string"
+  },
+  "inactive": {
+   "type": "boolean"
+  },
+  "jsonmodel_type": {
+   "ifmissing": "error",
+   "type": "string"
+  },
+  "last_modified_by": {
+   "readonly": true,
+   "type": "string"
+  },
+  "lock_version": {
+   "required": false,
+   "type": [
+    "integer",
+    "string"
+   ]
+  },
+  "monetary_value": {
+   "type": "string"
+  },
+  "monetary_value_note": {
+   "type": "string"
+  },
+  "purpose": {
+   "type": "string"
+  },
+  "ratings": {
+   "items": {
+    "type": "JSONModel(:assessment_attribute) object"
+   },
+   "type": "array"
+  },
+  "records": {
+   "ifmissing": "error",
+   "items": {
+    "properties": {
+     "_resolved": {
+      "readonly": "true",
+      "type": "object"
+     },
+     "ref": {
+      "ifmissing": "error",
+      "type": [
+       {
+        "type": "JSONModel(:accession) uri"
+       },
+       {
+        "type": "JSONModel(:resource) uri"
+       },
+       {
+        "type": "JSONModel(:digital_object) uri"
+       },
+       {
+        "type": "JSONModel(:archival_object) uri"
+       }
+      ]
+     }
+    },
+    "subtype": "ref",
+    "type": "object"
+   },
+   "minItems": 1,
+   "type": "array"
+  },
+  "related_eac_records": {
+   "type": "boolean"
+  },
+  "repository": {
+   "properties": {
+    "_resolved": {
+     "readonly": "true",
+     "type": "object"
+    },
+    "ref": {
+     "ifmissing": "error",
+     "readonly": "true",
+     "type": "JSONModel(:repository) uri"
+    }
+   },
+   "readonly": "true",
+   "subtype": "ref",
+   "type": "object"
+  },
+  "review_note": {
+   "type": "string"
+  },
+  "review_required": {
+   "type": "boolean"
+  },
+  "reviewer": {
+   "items": {
+    "properties": {
+     "_resolved": {
+      "readonly": "true",
+      "type": "object"
+     },
+     "ref": {
+      "ifmissing": "error",
+      "type": [
+       {
+        "type": "JSONModel(:agent_person) uri"
+       }
+      ]
+     }
+    },
+    "subtype": "ref",
+    "type": "object"
+   },
+   "type": "array"
+  },
+  "scope": {
+   "type": "string"
+  },
+  "sensitive_material": {
+   "type": "boolean"
+  },
+  "special_format_note": {
+   "type": "string"
+  },
+  "survey_begin": {
+   "ifmissing": "error",
+   "type": "date"
+  },
+  "survey_end": {
+   "type": "date"
+  },
+  "surveyed_by": {
+   "ifmissing": "error",
+   "items": {
+    "properties": {
+     "_resolved": {
+      "readonly": "true",
+      "type": "object"
+     },
+     "ref": {
+      "ifmissing": "error",
+      "type": [
+       {
+        "type": "JSONModel(:agent_person) uri"
+       }
+      ]
+     }
+    },
+    "subtype": "ref",
+    "type": "object"
+   },
+   "minItems": 1,
+   "type": "array"
+  },
+  "surveyed_duration": {
+   "type": "string"
+  },
+  "surveyed_extent": {
+   "type": "string"
+  },
+  "system_mtime": {
+   "readonly": true,
+   "type": "date-time"
+  },
+  "uri": {
+   "required": false,
+   "type": "string"
+  },
+  "user_mtime": {
+   "readonly": true,
+   "type": "date-time"
+  }
+ },
+ "type": "object",
+ "uri": "/repositories/:repo_id/assessments",
+ "validations": [
+  [
+   "error",
+   "check_assessment_monetary_value"
+  ],
+  [
+   "error",
+   "check_survey_dates"
+  ]
+ ],
+ "version": 1
+}

@@ -1,0 +1,93 @@
+{
+ "$schema": "http://www.archivesspace.org/archivesspace.json",
+ "properties": {
+  "create_time": {
+   "readonly": true,
+   "type": "date-time"
+  },
+  "created_by": {
+   "readonly": true,
+   "type": "string"
+  },
+  "date_calendar": {
+   "dynamic_enum": "date_calendar",
+   "type": "string"
+  },
+  "date_certainty": {
+   "dynamic_enum": "date_certainty",
+   "type": "string"
+  },
+  "date_era": {
+   "dynamic_enum": "date_era",
+   "type": "string"
+  },
+  "date_label": {
+   "dynamic_enum": "date_label",
+   "ifmissing": "error",
+   "type": "string"
+  },
+  "date_type_structured": {
+   "enum": [
+    "single",
+    "range"
+   ],
+   "ifmissing": "error",
+   "type": "string"
+  },
+  "jsonmodel_type": {
+   "ifmissing": "error",
+   "type": "string"
+  },
+  "last_modified_by": {
+   "readonly": true,
+   "type": "string"
+  },
+  "lock_version": {
+   "required": false,
+   "type": [
+    "integer",
+    "string"
+   ]
+  },
+  "repository": {
+   "properties": {
+    "_resolved": {
+     "readonly": "true",
+     "type": "object"
+    },
+    "ref": {
+     "ifmissing": "error",
+     "readonly": "true",
+     "type": "JSONModel(:repository) uri"
+    }
+   },
+   "readonly": "true",
+   "subtype": "ref",
+   "type": "object"
+  },
+  "structured_date_range": {
+   "required": false,
+   "type": "JSONModel(:structured_date_range) object"
+  },
+  "structured_date_single": {
+   "required": false,
+   "type": "JSONModel(:structured_date_single) object"
+  },
+  "system_mtime": {
+   "readonly": true,
+   "type": "date-time"
+  },
+  "user_mtime": {
+   "readonly": true,
+   "type": "date-time"
+  }
+ },
+ "type": "object",
+ "validations": [
+  [
+   "error",
+   "check_structured_date_label"
+  ]
+ ],
+ "version": 1
+}

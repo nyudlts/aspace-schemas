@@ -1,0 +1,105 @@
+{
+ "$schema": "http://www.archivesspace.org/archivesspace.json",
+ "properties": {
+  "caption": {
+   "maxLength": 16384,
+   "type": "string"
+  },
+  "checksum": {
+   "maxLength": 255,
+   "type": "string"
+  },
+  "checksum_method": {
+   "dynamic_enum": "file_version_checksum_methods",
+   "type": "string"
+  },
+  "create_time": {
+   "readonly": true,
+   "type": "date-time"
+  },
+  "created_by": {
+   "readonly": true,
+   "type": "string"
+  },
+  "file_format_name": {
+   "dynamic_enum": "file_version_file_format_name",
+   "type": "string"
+  },
+  "file_format_version": {
+   "maxLength": 255,
+   "type": "string"
+  },
+  "file_size_bytes": {
+   "type": "integer"
+  },
+  "file_uri": {
+   "ifmissing": "error",
+   "maxLength": 16384,
+   "type": "string"
+  },
+  "identifier": {
+   "readonly": true,
+   "type": "string"
+  },
+  "is_representative": {
+   "default": false,
+   "type": "boolean"
+  },
+  "jsonmodel_type": {
+   "ifmissing": "error",
+   "type": "string"
+  },
+  "last_modified_by": {
+   "readonly": true,
+   "type": "string"
+  },
+  "lock_version": {
+   "required": false,
+   "type": [
+    "integer",
+    "string"
+   ]
+  },
+  "publish": {
+   "type": "boolean"
+  },
+  "repository": {
+   "properties": {
+    "_resolved": {
+     "readonly": "true",
+     "type": "object"
+    },
+    "ref": {
+     "ifmissing": "error",
+     "readonly": "true",
+     "type": "JSONModel(:repository) uri"
+    }
+   },
+   "readonly": "true",
+   "subtype": "ref",
+   "type": "object"
+  },
+  "system_mtime": {
+   "readonly": true,
+   "type": "date-time"
+  },
+  "use_statement": {
+   "dynamic_enum": "file_version_use_statement",
+   "type": "string"
+  },
+  "user_mtime": {
+   "readonly": true,
+   "type": "date-time"
+  },
+  "xlink_actuate_attribute": {
+   "dynamic_enum": "file_version_xlink_actuate_attribute",
+   "type": "string"
+  },
+  "xlink_show_attribute": {
+   "dynamic_enum": "file_version_xlink_show_attribute",
+   "type": "string"
+  }
+ },
+ "type": "object",
+ "version": 1
+}
